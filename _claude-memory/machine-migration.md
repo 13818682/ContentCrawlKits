@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: def5d2de-c606-4c61-a075-c999db6c642c
-  modified: 2026-08-29T15:53:12.699Z
+  modified: 2026-08-29T15:56:38.554Z
 ---
 
 2026-08 决定把本项目迁移到另一台电脑。已在 GitHub 创建私有仓库 `ContentCrawlKits`。目标：平衡切换、少损失、少时间成本。
@@ -29,6 +29,7 @@ metadata:
 - 仓库已有首次提交 `d2f467f`（526 文件），git 身份为占位 `weiwei@users.noreply.github.com`（需确认/amend）
 - 仓库内已含 `_claude-memory/`（记忆快照）、`迁移到新电脑.md`（操作手册）、`backup-claude-env.sh`
 - **✅ 已 push 到 GitHub**：`https://github.com/13818682/ContentCrawlKits`，main 分支同步，凭据走 Windows 凭据管理器
+- **日常提交用 `bash sync.sh "说明"`**：自动刷新 `_claude-memory/`（本机最新记忆）→ commit → push，一步完成内容+记忆同步
 - **换机后按 `迁移到新电脑.md` 还原**；新机 push/pull 凭据需另配（PAT 或凭据管理器）
 
 关联：[[content-creation-progress]] [[file-naming-convention]] [[model-config]]
