@@ -1,0 +1,30 @@
+# 机器相关 / 密钥（勿提交）
+.claude/settings.local.json
+.env
+.env.*
+
+# 备份产物
+迁移备份/
+backup/
+
+# 大型媒体：可再生成，走本地备份包（project-videos-*.tar.gz），不入 git
+# 如需入库请改用 Git LFS（https://git-lfs.com）
+*.mp4
+*.mp3
+*.mov
+*.avi
+*.mkv
+
+# 脚本输出物（可由 scripts/ 重新生成）
+scripts/output/
+
+# 临时文件
+*.tmp
+_TMP_*
+~$*
+*.bak
+
+# 系统
+Thumbs.db
+.DS_Store
+desktop.ini

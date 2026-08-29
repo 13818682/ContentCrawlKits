@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b3a5c"/>
+      <stop offset="60%" stop-color="#142a44"/>
+      <stop offset="100%" stop-color="#0d1e30"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f5c66b"/>
+      <stop offset="100%" stop-color="#e8a53a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="383" fill="url(#bg)"/>
+
+  <!-- 顶部品牌行 -->
+  <text x="60" y="58" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" fill="#9db8d4" letter-spacing="3">HSEE · 深圳中考志愿规划</text>
+
+  <!-- 金色装饰线 -->
+  <rect x="60" y="82" width="120" height="4" rx="2" fill="url(#gold)"/>
+
+  <!-- 主标题 -->
+  <text x="60" y="168" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="64" font-weight="700" fill="#ffffff">深圳中考信息合集</text>
+
+  <!-- 强调行 -->
+  <text x="60" y="232" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="34" font-weight="600" fill="url(#gold)">2027届家长必读</text>
+
+  <!-- 副标语 -->
+  <text x="60" y="278" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="24" fill="#c9d9e8" letter-spacing="2">数据驱动 · 不贩卖焦虑</text>
+
+  <!-- 底部关键词条 -->
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" fill="#8aa6c0">
+    <text x="60" y="340">考生规模</text>
+    <text x="158" y="340">·</text>
+    <text x="180" y="340">录取率</text>
+    <text x="258" y="340">·</text>
+    <text x="280" y="340">志愿填报</text>
+    <text x="378" y="340">·</text>
+    <text x="400" y="340">指标生</text>
+    <text x="478" y="340">·</text>
+    <text x="500" y="340">非深户D类</text>
+    <text x="600" y="340">·</text>
+    <text x="622" y="340">出路全景</text>
+  </g>
+
+  <!-- 右下角装饰圆 -->
+  <circle cx="830" cy="80" r="70" fill="none" stroke="#2a4d70" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="830" cy="80" r="46" fill="none" stroke="#2a4d70" stroke-width="1" opacity="0.4"/>
+</svg>

@@ -1,0 +1,15 @@
+- [Project Overview](project-overview.md) — 深圳中考志愿填报垂直AI自动化内容平台定位、赛道、核心目标
+- [Competitor Analysis](competitor-analysis.md) — 竞品调研（中考志愿网、深校家长帮等）及差异化策略
+- [Compliance Requirements](compliance-requirements.md) — AI内容标识法规、教育内容红线、合规检查清单
+- [Architecture Decisions](architecture-decisions.md) — 技术选型、七模块架构、PRD追溯
+- [Validation Phase Plan](validation-phase-plan.md) — 先验证后自建策略、8周低成本试跑SOP、Go/No-Go决策框架
+- [D-Category Parent Research](dcategory-parent-research.md) — D类非深户家长用户画像、情绪动因、内容机会清单（insight+firecrawl调研成果）
+- [2026 Enrollment Data](2026-enrollment-data.md) — 2026年深圳中考四类高中阶段学位供给完整招生数据（公办普高/民办普高/公办中职/民办中职）
+- [File Naming Convention](file-naming-convention.md) — 内容创作文件统一命名格式：{序号}-{文章编号}-{文章标题}-{类型}.md
+- [Content Creation Progress](content-creation-progress.md) — 六系列（S1/P1-P5）内容创作完成状态，P5已全部完成，下一步是高中阶段新系列
+- [Simplified Version Style Guide](simplified-version-style-guide.md) — 公众号"精简版"优化规范：命名/文字风格/配图制作全套要求（先审批后生成）
+- [Data Source Attribution](data-source-attribution.md) — 内容"数据来源"标注统一用官方来源（深圳市教育局正式发布文件），不写内部表/视图名
+- [Non-Shenzhen-Hukou Conditions](non-shenzhen-hukou-conditions.md) — 非深户D类报考公办高中官方5项条件（2026）及P1-3口径差异修正
+- [Copy Audience Respect](copy-audience-respect.md) — 对外文案不得出现"付费能力/高净值/高端产品"等内部术语，避免家长被当高价目标
+- [Model Config](model-config.md) — 会话模型 deepseek-v4-flash[1m]，上下文 100 万 token，可放心整读超长文档
+- [Machine Migration](machine-migration.md) — 迁机计划：GitHub 私有仓库、Claude Code 环境打包、记忆同步方案
