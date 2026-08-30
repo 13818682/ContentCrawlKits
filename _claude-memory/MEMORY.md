@@ -13,3 +13,5 @@
 - [Copy Audience Respect](copy-audience-respect.md) — 对外文案不得出现"付费能力/高净值/高端产品"等内部术语，避免家长被当高价目标
 - [Model Config](model-config.md) — 会话模型 deepseek-v4-flash[1m]，上下文 100 万 token，可放心整读超长文档
 - [Machine Migration](machine-migration.md) — 迁机计划：GitHub 私有仓库、Claude Code 环境打包、记忆同步方案
+- [Weekly Ops 2026-08-30](weekly-operations-20260830.md) — 首份周运营数据：小红书=获客引擎、抖音需改原生内容、公众号搜一搜SEO、北极星指标
+- [Operations Management](operations-management.md) — 运营管理决策：个体户先行、多城扩张、9平台矩阵、北极星基线（2.内容管理及运营已并入本仓）
