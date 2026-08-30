@@ -86,6 +86,8 @@ claude-mem (long-term memory) > local files (fs / docx-reader / doc-convert) > f
     ├── 13-3-小红书内容生产提示词模板（合集规划·笔记·配图·合规）.md  # XHS template: 合集规划/单篇笔记/首图配图/合规, S1合集12篇
     └── 13-4-抖音口播视频内容生产提示词模板（口播脚本·视频制作·分发）.md  # Douyin template: 口播脚本/剪映图文成片/智影数字人/蚁小二, S1合集10条
     └── 13-5-知乎内容生产提示词模板（回答·想法·配图·合规）.md  # Zhihu template: 回答+想法双件套, 心理旅程撰写思路, 1600×900/1080×1080配图
+    ├── 14-运营管理/  # 运营管理侧（自 2.内容管理及运营 并入）: 主体注册/税务/商业测算/多城扩张/获客传播，00-运营路线图-总览.md 为入口
+    └── 15-运营数据/  # 周运营数据归档: 每周分析报告 + 平台导出（按日期分目录，如 20260830）
 ```
 
 ## Architecture (from design docs)
@@ -111,6 +113,22 @@ The platform is designed as a 7-module pipeline:
 - **Three-level tag system**: Phase tag → Business topic tag (e.g., B03 冲稳保梯度) → Platform+format tag (e.g., XHS-tip, DY-template)
 - **70/30 content split**: AI generates 70% skeleton, human editors add 30% local data and real cases
 - **Compliance is critical**: Semantic similarity vs source must stay below 30%, scraped content is for reference only, never directly republished
+
+## 运营管理与数据归档（自 2.内容管理及运营 并入）
+
+本仓现在同时承担**内容生产侧**（docs/01-13，见上）与**运营管理侧**（docs/14-15）。原 `E:\1.HSEE\2.内容管理及运营` 已并入，统一知识、记忆与 git 版本管理。
+
+**权威运营文档**（docs/14-运营管理/，先读 `00-运营路线图-总览.md` 再动笔）：
+- 变现主体策略：**个体户先行 → 主体变更升级为公司**（走「主体变更」保 AppID/OpenID/用户数据，勿走「主体迁移」；变更前个体户保持存续不注销）
+- 多城市扩张：深圳先行（跑通闭环）→ 东莞 → 广州，共 3 城
+- 关键数字：第一年成本 ¥2000–8000；深圳个体户注册 ¥1000–2500；盈亏平衡 15–50 付费用户/年
+- 9 平台矩阵：公众号/B站/小红书/抖音/头条/微博/知乎/快手/百度贴吧
+
+**运营数据归档**（docs/15-运营数据/，按日期分目录）：
+- 每周分析报告（跨平台对比 + 平台适配性 + 发布时间建议），报告即模板，下周围绕同口径对比
+- 北极星指标：**抖音完播率**、**小红书获粉转化率**（首周基线：抖音完播 6%、小红书观看 2,746→净增粉 42）
+- 战略判断（2026-08 基线）：小红书=获客主阵地；抖音=需改原生内容形态（停止图文直投）；公众号=搜一搜 SEO 资产；头条=低门槛放量；知乎=待问答化；**B站暂不做引流，设触发条件后再进**
+- 每周报告归档后，将关键结论沉淀到长期记忆（weekly-operations-*）
 
 ## Working with Design Docs
 
