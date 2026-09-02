@@ -202,7 +202,7 @@ def cover_answer():
     im = img(th, "d1", "beam", "slash"); d = ImageDraw.Draw(im)
     y = badge(d, BANNER, th["accent"]) + 150
     T(d, (W / 2, y), "不叫滑档", font=ImageFont.truetype(FB, 150), fill=th["accent"], anchor="mm", name="封面3-大字")
-    block(d, "多数是冲档落空 · 志愿没填好，不是孩子考砸", ImageFont.truetype(FB, 46), (255, 255, 255), y + 170, 860, name="封面3-主句")
+    T(d, (W / 2, y + 170), "多数是冲档落空 · 志愿没填好，不是孩子考砸", ImageFont.truetype(FB, 46), (255, 255, 255), "mm", "封面3-主句")
     block(d, "真正有意义的选择只有两条：接受并规划 · 或复读（慎选）", ImageFont.truetype(FR, 32), (230, 238, 248), y + 250, 900, name="封面3-副句")
     footer(d)
     return im
@@ -213,7 +213,7 @@ def table_rank():
     th = BLUES["cobalt"]
     im = img(th, "v", "center", "grid"); d = ImageDraw.Draw(im)
     y = badge(d, BANNER, th["accent"]) + 76
-    block(d, "排名40左右 · 2026录取线（AC类住宿）", ImageFont.truetype(FB, 46), (255, 255, 255), y, 820, name="排名-标题")
+    T(d, (W / 2, y + 20), "排名40左右 · 2026录取线（AC类住宿）", ImageFont.truetype(FB, 46), (255, 255, 255), "mm", "排名-标题")
     tx0, tx1 = 80, 1120
     fH = ImageFont.truetype(FB, 30)
     card(im, [tx0, 330, tx1, 386], fill_alpha=26, radius=16)
