@@ -41,8 +41,11 @@ def put(d, text, xy, fnt, fill, maxw, name=""):
 
 def cover(out, q, p):
     im, d = base(900, 383)
-    put(d, q, (450, 160), ImageFont.truetype(FB, 50), WHITE, 850, "q")
-    put(d, p, (450, 272), ImageFont.truetype(FB, 40), GOLD, 700, "p")
+    put(d, "深圳中考", (450, 52), ImageFont.truetype(FB, 46), GOLD, 850, "kicker")
+    kw = d.textlength("深圳中考", font=ImageFont.truetype(FB, 46))
+    d.line([(450 - kw / 2 - 6, 52 + 50), (450 + kw / 2 + 6, 52 + 50)], fill=GOLD, width=5)
+    put(d, q, (450, 190), ImageFont.truetype(FB, 50), WHITE, 850, "q")
+    put(d, p, (450, 298), ImageFont.truetype(FB, 40), GOLD, 700, "p")
     im.save(out)
     print("saved", out.split("/")[-1])
 
