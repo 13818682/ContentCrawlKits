@@ -34,3 +34,6 @@ _TMP_*
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# 2.参考资料：仅文本版源PDF入git；扫描图文版PDF由文本版可再得，不入库
+2.参考资料/*（扫描型图文版）*.pdf
