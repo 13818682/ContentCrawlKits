@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""S1 头条/抖音/小红书 三平台配图（口径可对账 440+20+170=630）"""
+"""S1 头条/抖音/小红书 配图 v2：第一眼=深圳中考；主句=问题+承诺；等式不上封面"""
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np, os
 FB = "C:/Windows/Fonts/msyhbd.ttc"; FR = "C:/Windows/Fonts/msyh.ttc"
@@ -9,7 +9,7 @@ LIGHT = (157, 184, 212); SUB = (201, 217, 232)
 HERE = os.path.dirname(os.path.abspath(__file__)) + "/"
 
 
-def base(w, h, gx=0.5, gy=0.18):
+def base(w, h, gx=0.5, gy=0.16):
     T = np.array(TOP, float); B = np.array(BOT, float)
     t = np.linspace(0, 1, h)[:, None, None]
     a = T[None, None, :] * (1 - t) + B[None, None, :] * t
@@ -29,7 +29,7 @@ def put(d, text, xy, size, fill, w, bold=True, maxw=None):
     fp = FB if bold else FR
     f = ImageFont.truetype(fp, size)
     mw = maxw if maxw else w - 120
-    while f.size > 16:
+    while f.size > 12:
         bb = d.textbbox((0, 0), text, font=f, anchor="mm")
         if bb[2] - bb[0] <= mw + 1:
             break
@@ -51,34 +51,34 @@ def pill(d, text, cy, size, w, pad=34):
 
 # ---- 头条封面 1200×900 ----
 im, d = base(1200, 900)
-pill(d, "深圳中考 · 备考策略", 120, 30, 1200, pad=30)
-put(d, "630分怎么来的？", (600, 330), 104, WHITE, 1200, True, 1080)
-put(d, "8 科作战表 · 口径可对账", (600, 500), 86, GOLD, 1200, True, 1080)
-put(d, "440笔试 ＋ 20理化实验 ＋ 170史道体 ＝ 630", (600, 660), 48, LIGHT, 1200, False, 1080)
+fk = put(d, "深圳中考", (600, 96), 66, GOLD, 1200, True, 1000)
+tw = d.textlength("深圳中考", font=fk); d.line([(600 - tw/2 - 6, 172), (600 + tw/2 + 6, 172)], fill=GOLD, width=7)
+put(d, "8科怎么考、怎么给分？", (600, 360), 104, WHITE, 1200, True, 1080)
+put(d, "630分拆解 · 一张表看懂", (600, 560), 78, GOLD, 1200, True, 1080)
+put(d, "考什么｜多少分｜精力怎么分", (600, 700), 42, LIGHT, 1200, False, 1080)
 put(d, "数据来源：深圳市教育局公开信息 · 人工核对", (600, 852), 22, SUB, 1200, False)
 im.save(HERE + "02.今日头条/S1-630构成-头条-封面-1200x900.png")
-print("saved 头条封面")
+print("saved 头条封面 v2")
 
-# ---- 抖音首图 1080×1920（右≤950 / 内容≤y1590） ----
-im, d = base(1080, 1920, 0.5, 0.16)
-fk = put(d, "深圳中考", (520, 150), 56, GOLD, 1080, True, 800)
-tw = d.textlength("深圳中考", font=fk); d.line([(520 - tw/2 - 5, 222), (520 + tw/2 + 5, 222)], fill=GOLD, width=6)
-put(d, "630", (520, 470), 230, GOLD, 1080, True, 760)
-put(d, "＝ 440笔试 ＋ 20实验 ＋ 170史道体", (520, 730), 54, WHITE, 1080, True, 800)
-put(d, "8科分值一张表 · 收藏不迷路", (520, 940), 46, LIGHT, 1080, False, 800)
+# ---- 抖音首图 1080×1920 ----
+im, d = base(1080, 1920)
+fk = put(d, "深圳中考", (520, 150), 92, GOLD, 1080, True, 820)
+tw = d.textlength("深圳中考", font=fk); d.line([(520 - tw/2 - 8, 246), (520 + tw/2 + 8, 246)], fill=GOLD, width=9)
+put(d, "8科怎么考、怎么给分？", (520, 560), 92, WHITE, 1080, True, 900)
+put(d, "630分拆解 · 一张表看懂", (520, 790), 66, GOLD, 1080, True, 900)
+put(d, "考什么｜多少分｜精力怎么分", (520, 960), 46, LIGHT, 1080, False, 900)
 pill(d, "关注我 · 政策解码器继续讲", 1500, 40, 1080, pad=34)
 im.save(HERE + "03.抖音/S1-630构成-抖音-首图-1080x1920.png")
-print("saved 抖音首图")
+print("saved 抖音首图 v2")
 
-# ---- 小红书封面（互补版·封面标题=结论向） 1080×1440 ----
-im, d = base(1080, 1440, 0.5, 0.18)
-fk = put(d, "深圳中考 · 备考策略", (540, 130), 34, GOLD, 1080, True, 960)
-tw = d.textlength("深圳中考 · 备考策略", font=fk); d.line([(540 - tw/2 - 4, 178), (540 + tw/2 + 4, 178)], fill=GOLD, width=4)
-put(d, "8 科作战表", (540, 360), 116, WHITE, 1080, True, 960)
-put(d, "630 口径可对账", (540, 560), 92, GOLD, 1080, True, 960)
-put(d, "440笔试 ＋ 20实验 ＋ 170史道体 ＝ 630", (540, 800), 44, LIGHT, 1080, False, 960)
-pill(d, "语文·数学·英语·物化笔试 = 440", 1060, 36, 1080, pad=40)
+# ---- 小红书封面（互补版） 1080×1440 ----
+im, d = base(1080, 1440)
+fk = put(d, "深圳中考", (540, 150), 92, GOLD, 1080, True, 960)
+tw = d.textlength("深圳中考", font=fk); d.line([(540 - tw/2 - 8, 246), (540 + tw/2 + 8, 246)], fill=GOLD, width=9)
+put(d, "8科怎么考、怎么给分？", (540, 520), 104, WHITE, 1080, True, 960)
+put(d, "630分拆解 · 一张表看懂", (540, 760), 72, GOLD, 1080, True, 960)
+put(d, "主科优先 · 实验跟练 · 副科稳住", (540, 940), 42, LIGHT, 1080, False, 960)
 put(d, "备考策略 · 收藏不迷路 · 数据见正文", (540, 1280), 28, SUB, 1080, False)
 im.save(HERE + "04.小红书/S1-630构成-小红书-封面-互补版-1080x1440.png")
-print("saved 小红书封面")
+print("saved 小红书封面 v2")
 print("done")
