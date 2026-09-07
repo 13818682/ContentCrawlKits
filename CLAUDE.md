@@ -68,30 +68,13 @@ claude-mem (long-term memory) > local files (fs / docx-reader / doc-convert) > f
 │   ├── 建设方案-自媒体内容自动化创作平台-完整方案.md   # Construction plan with feasibility & cost estimation
 │   └── 验证阶段-低成本试跑实施细则.md               # 8-week validation SOP with tool comparison & HSEE data integration
 └── docs/                                              # Structured output documents (mcp-docs managed)
-    ├── 01-PRD-深圳中考志愿填报AI自动化内容平台.md         # Business PRD with competitor analysis, P0-P2, metrics, compliance
-    ├── 02-tech-design-深圳中考志愿填报AI自动化内容平台.md  # Technical design with DB, API, architecture, deployment
-    ├── 03-内容策略与创作框架-深圳中考志愿填报（合订本）.md  # Content strategy & creation framework: 5 pillars × 35+ topics × keyword map × annual calendar (merged from 03+03A)
-    └── 03-内容创作-深圳中考志愿填报/                    # Content writing workspace: 1 overview + 3 phases (24 dirs), each topic dir stores draft articles
-    ├── 04-内容发布合规检查清单.md                        # AI content labeling regulations, content red lines, pre-publish checklist
-    ├── 05-2026深圳中考政策变化与热点日历.md              # Monthly policy calendar with content topic planning for the full year
-    ├── 06-学校介绍内容变形指南.md                        # How to transform 180 school MD files into platform-specific content, data enhancement SOP
-    └── 07-竞品内容生态调研.md                           # Competitor content landscape scan across 5 platforms, gap analysis, differentiation strategy
-    ├── 08-九大平台文案撰写要求说明书.md                    # 9-platform copywriting guide: user profiles, writing rules, title formulas, tone, and ready-to-use AI prompts per platform
-    ├── 09-工具链使用手册-市场调研与文案撰写.md              # MCP toolchain & skills handbook: two-scenario command reference with D类家长 case study
-    ├── 10-发布素材自动化方案.md                            # Publish-asset automation plan: draft MD → 9-platform publish assets (copy/data-chart/cover/video), per-platform checklist, tool selection, cost
-    ├── 11-视频制作与分发SOP.md                             # Video production & distribution SOP: 口播脚本→剪映/智影→蚁小二, per-platform script params, publish schedule
-    ├── 12-细分市场内容专区规划.md                            # Segment content zones: 4 audience zones (D类/临界生/区域/AC类), tag+index organization, 四象限话术矩阵
-    ├── 13-1-公众号内容生产提示词模板（精简版·极简版·长图·插图）.md  # WeChat template: 精简版/极简版/长图/插图 prompt templates with naming rules & verification
-    ├── 13-2-今日头条号内容生产提示词模板（长文·微头条·长图·插图）.md  # Toutiao template: 长文/微头条/配图 prompt templates, file naming rules, docx via external tool
-    ├── 13-3-小红书内容生产提示词模板（合集规划·笔记·配图·合规）.md  # XHS template: 合集规划/单篇笔记/首图配图/合规, S1合集12篇
-    └── 13-4-抖音口播视频内容生产提示词模板（口播脚本·视频制作·分发）.md  # Douyin template: 口播脚本/剪映图文成片/智影数字人/蚁小二, S1合集10条
-    └── 13-5-知乎内容生产提示词模板（回答·想法·配图·合规）.md  # Zhihu template: 回答+想法双件套, 心理旅程撰写思路, 1600×900/1080×1080配图
-    ├── 14-运营管理/  # 运营管理侧（自 2.内容管理及运营 并入）: A-已办结存档-主体注册/ B-策划与决策/ C-日常运营 三分组，00-运营路线图-总览.md 为入口
-    ├── 15-运营数据/  # 周运营数据归档: 每周分析报告 + 平台导出（按日期分目录，如 20260830）
-    ├── 16-跨平台内容与视频复用边界（抖音·小红书·今日头条）.md
-    ├── 17-知乎选题纪律与导流策略.md
-    ├── 18-平台文案与图文优化规则方案（书摘+现有规则+平台官方准则）.md
-    └── 19-一稿多载体-各平台变形与发布规范.md  # 公众号/头条/小红书/抖音 七载体变形与发布：载体匹配/落位节奏/同平台同主题只发一版/小红书每日多篇界限/必须杜绝清单
+    ├── 00-产品-平台PRD与技术/          # 平台设计：01-PRD 业务说明书 / 02-tech-design 技术方案
+    ├── 01-策划-内容策略与生产方案/       # 内容创作·策划层：03 内容策略合订本 / 05 政策日历 / 06 学校变形指南 / 07 竞品调研 / 09 工具链手册 / 10 发布素材自动化 / 11 视频制作分发SOP / 12 专区规划
+    ├── 02-规范-平台文案与发布约束/       # 内容创作·约束层：04 合规清单 / 04A 公众号搜一搜 / 08 九大平台文案(并入原18附录) / 13-1~13-5 各平台提示词模板 / 16 跨平台复用边界 / 17 知乎纪律 / 19 一稿多载体发布规范
+    ├── 03-内容创作-深圳中考志愿填报/  # 内容创作工作区：系列(S1/P1-P5/问答专区…)每主题存多平台稿
+    ├── 12-专区/                      # 细分市场专区索引（配合 策划目录 12-专区规划）
+    ├── 14-运营管理/                  # 运营侧：A-已办结存档-主体注册 / B-策划与决策 / C-日常运营，00-运营路线图-总览.md 为入口
+    └── 15-运营数据/                  # 周运营数据归档（每周分析报告 + 平台导出，按日期分目录）
 ```
 
 ## Architecture (from design docs)
@@ -120,7 +103,7 @@ The platform is designed as a 7-module pipeline:
 
 ## 运营管理与数据归档（自 2.内容管理及运营 并入）
 
-本仓现在同时承担**内容生产侧**（docs/01-13，见上）与**运营管理侧**（docs/14-15）。原 `E:\1.HSEE\2.内容管理及运营` 已并入，统一知识、记忆与 git 版本管理。
+本仓现在同时承担**内容生产侧**（docs/ 的00-产品-平台PRD与技术 / 01-策划-内容策略与生产方案 / 02-规范-平台文案与发布约束 / 03-内容创作-深圳中考志愿填报，见上）与**运营管理侧**（docs/14-运营管理、docs/15-运营数据）。原 `E:\1.HSEE\2.内容管理及运营` 已并入，统一知识、记忆与 git 版本管理。
 
 **权威运营文档**（docs/14-运营管理/，先读 `00-运营路线图-总览.md` 再动笔）：
 - 变现主体策略：**个体户先行 → 主体变更升级为公司**（走「主体变更」保 AppID/OpenID/用户数据，勿走「主体迁移」；变更前个体户保持存续不注销）
