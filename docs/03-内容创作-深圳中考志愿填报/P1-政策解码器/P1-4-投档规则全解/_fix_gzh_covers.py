@@ -51,12 +51,14 @@ def fit(text, start=96, minimum=40, cap=MAXW):
         s -= 2
     return minimum, font(minimum)
 
-def badge(d, text):
-    f = font(21)
-    tw = d.textlength(text, font=f)
-    d.rounded_rectangle([X0-8, 24, X0+tw+12, 52], radius=9, fill=(6,18,44),
-                        outline=(120,165,225), width=2)
-    d.text((X0, 27), text, font=f, fill=(205,228,255))
+GOLD = (255, 210, 120)
+
+def brand(d, text):
+    """首图品牌行（2026-09-12 用户要求）：「深圳中考」用大号金字，手机缩略图上一眼可辨；
+    系列标签退到右上角小字。原 21px 胶囊在手机上不可读。"""
+    d.text((X0, 26), "深圳中考", font=font(36), fill=GOLD, anchor="la")
+    lab = text.split("·", 1)[1].strip() if "·" in text else text
+    d.text((W - X0, 34), lab, font=font(22), fill=(180,208,246), anchor="ra")
 
 def box(text, f, y):
     return d.textbbox((X0, y), text, font=f, anchor="la")
@@ -67,7 +69,7 @@ def _box(text, f, y):
 def render(out, TOP, BOT, badge_txt, primary, secondary, hook):
     global d
     img = Image.fromarray(base(W, H, TOP, BOT)); d = ImageDraw.Draw(img)
-    badge(d, badge_txt)
+    brand(d, badge_txt)
     f2 = font(32)
 
     def plan(ps):
@@ -76,7 +78,7 @@ def render(out, TOP, BOT, badge_txt, primary, secondary, hook):
         pf = font(ps)
         if tlen(primary, pf) > MAXW:
             return None
-        yp = 128
+        yp = 96
         pb = _box(primary, pf, yp)
         ys = sb = None
         if secondary:
@@ -139,11 +141,11 @@ UNITS = {
       primary="中考同分先比生地", secondary="不是先比语数英",
       hook="生地：初二就定下的隐形分"),
   "子任务S3-四个投档错误自查": dict(TOP=(14,32,66), BOT=(5,10,24), badge="深圳中考 · 志愿自查 S3",
-      primary="12个志愿全填一个分段？", secondary=None,
-      hook="冲稳保底 · 拉开梯度"),
+      primary="投档4个坑", secondary="第2个最贵 · 12个志愿全灭",
+      hook="附2026录取线95校分档表"),
   "子任务S4-走读调剂与保存确认": dict(TOP=(22,62,122), BOT=(6,15,36), badge="深圳中考 · 操作提醒 S4",
-      primary="走读该不该勾？保存≠确认", secondary=None,
-      hook="单程45分钟内才勾 · 填完记得点确认"),
+      primary="走读调剂该不该勾？", secondary="89所走读线平均低11分",
+      hook="分数够得着 ＋ 通勤能接受，才勾"),
 }
 if __name__ == "__main__":
     for u, cfg in UNITS.items():

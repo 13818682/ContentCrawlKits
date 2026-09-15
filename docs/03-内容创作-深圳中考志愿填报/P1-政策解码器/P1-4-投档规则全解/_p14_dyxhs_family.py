@@ -70,12 +70,16 @@ def dy_card(frame, TOP, BOT, CARD, EDGE, out):
     dy_header(d, frame["tag"])
     if frame.get("kind") == "b":
         cmm(d, frame["big"], (W/2, 600), 96, WHITE, maxw=800, mini=76, tag="b")
-        y = 852
+        rows_n = len(frame["rows"])
+        gap = 24
+        y_top, y_bot = 852, 1340          # 底部 note 固定在 1426，行区不得越 1340
+        rh = min(150, max(96, (y_bot - y_top - (rows_n - 1) * gap) / rows_n))
+        y = y_top
         for i, (txt, g) in enumerate(frame["rows"]):
-            y1 = y + 150
-            rcard(d, 80, y, W-80, y1, CARD, EDGE)
+            y1 = y + rh
+            rcard(d, 80, y, W-80, int(round(y1)), CARD, EDGE)
             cmm(d, txt, (W/2, (y+y1)/2), 46, GOLD if g else WHITE, maxw=800, mini=36, tag="r")
-            y = y1 + 24
+            y = y1 + gap
         cmm(d, frame["note"], (W/2, 1426), 40, LIGHT, fp=FR, maxw=800, mini=32, tag="n")
     else:
         big = frame.get("bigsize", 96)
@@ -114,7 +118,7 @@ def xhs_cover(TOP, BOT, title, kick, foot, out):
     print("OK xhs cover", out.split('/')[-1]); BADS.clear()
     save_img(im, out)
 
-def xhs_card(TOP, BOT, CARD, EDGE, kick, title, sub, tiles, rows, concl, out):
+def xhs_card(TOP, BOT, CARD, EDGE, kick, title, sub, tiles, rows, concl, out, foot=None):
     """统一底色；版式三段填满：顶部标题区 → 主体区(300~1090，行高自适应铺满)
     → 底部【金框结论横幅】(~1160-1300) → 数据脚注。底部不留大段空白。"""
     im, _ = base(WX, HX, TOP, BOT)
@@ -155,7 +159,7 @@ def xhs_card(TOP, BOT, CARD, EDGE, kick, title, sub, tiles, rows, concl, out):
     if concl:
         first = concl[0]
         cmm(d, first[0], (WX/2, b0+54), 44, GOLD if first[1] else WHITE, maxw=960, mini=34, tag="band")
-    cmm(d, "数据来源：深圳市教育局2026报考指导手册 · 人工核对", (WX/2, 1392), 21, SUB, fp=FR, maxw=1000, mini=16, tag="foot")
+    cmm(d, foot or "数据来源：深圳市教育局2026报考指导手册 · 人工核对", (WX/2, 1392), 21, SUB, fp=FR, maxw=1000, mini=16, tag="foot")
     bad = []
     for tagn, bb in BADS:
         if bb[0] < 18 or bb[1] < 8 or bb[2] > WX-18 or bb[3] > HX-8:
