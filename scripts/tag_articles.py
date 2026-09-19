@@ -9,7 +9,7 @@ import os
 import re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-CONTENT_DIR = os.path.abspath(os.path.join(BASE, "..", "docs", "03-内容创作-深圳中考志愿填报"))
+CONTENT_DIR = os.path.abspath(os.path.join(BASE, "..", "docs", "03-内容创作/SZ深圳"))
 
 # article_id -> 标签。P3-5 四个子文件分别用 P3-5 / P3-5-02 / -03 / -04。
 TAGS = {

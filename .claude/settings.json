@@ -1,0 +1,6 @@
+{
+  "env": {
+    "CLAUDE_MEM_CONTEXT_OBSERVATIONS": "15",
+    "CLAUDE_MEM_CONTEXT_SHOW_LAST_SUMMARY": "false"
+  }
+}
