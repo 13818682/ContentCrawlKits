@@ -20,6 +20,11 @@ scripts/output/
 # 发布用 Word 稿（外部工具由 md 转换，可由 md 再生成，不入 git）
 *.docx
 
+# 压缩包：仓内正文与资产一律以解压态入库，打包件不再跟踪（经营者 2026-09-21 定）
+*.rar
+*.zip
+*.7z
+
 # Python 缓存
 __pycache__/
 *.pyc
