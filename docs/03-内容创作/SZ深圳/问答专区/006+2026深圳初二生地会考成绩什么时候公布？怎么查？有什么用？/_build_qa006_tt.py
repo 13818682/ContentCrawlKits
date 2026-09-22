@@ -205,35 +205,37 @@ def tt_cover(fn, title, hook):
 
 
 def cover_data():
-    """封面2-数据对撞：100 分 vs 计入总分 0 分。"""
+    """封面2-数据对撞：100 分 vs 计入总分 0 分（顶部带官方已定日期）。"""
     im = base()
     decor_ticks(im)
     d = ImageDraw.Draw(im)
     badge(d)
-    rcard(im, [X0, 250, W - X0, 570], fa=16, outline=GOLD, radius=24)
-    d.line([W / 2, 280, W / 2, 540], fill=GOLD, width=3)
-    put(d, "100分", (W * 0.28, 348), 100, GOLD, tag="n1")
-    put(d, "生地会考满分", (W * 0.28, 442), 32, LIGHT, bold=False, tag="l1")
-    put(d, "0分", (W * 0.72, 348), 100, WHITE, tag="n2")
-    put(d, "计入中考总分", (W * 0.72, 442), 32, LIGHT, bold=False, tag="l2")
-    block(d, "不算分，却是录取的硬门槛", 40, WHITE, 610, tag="c")
+    put(d, "9月23日 10:00 开查", (W / 2, 198), 52, GOLD, tag="date")
+    rcard(im, [X0, 262, W - X0, 582], fa=16, outline=GOLD, radius=24)
+    d.line([W / 2, 292, W / 2, 552], fill=GOLD, width=3)
+    put(d, "100分", (W * 0.28, 360), 100, GOLD, tag="n1")
+    put(d, "生地会考满分", (W * 0.28, 454), 32, LIGHT, bold=False, tag="l1")
+    put(d, "0分", (W * 0.72, 360), 100, WHITE, tag="n2")
+    put(d, "计入中考总分", (W * 0.72, 454), 32, LIGHT, bold=False, tag="l2")
+    block(d, "不算分，却是录取的硬门槛", 40, WHITE, 626, tag="c")
     footer(d)
     gate("头条 封面2-数据对撞")
     save(im, f"{PFX}-头条-封面2-数据对撞-1200x900.png")
 
 
 def cover_answer():
-    """封面3-答案大字。"""
+    """封面3-答案大字（顶部带官方已定日期）。"""
     im = base()
     decor_ticks(im)
     d = ImageDraw.Draw(im)
     badge(d)
-    put(d, "没成绩", (W / 2 + 3, 330), 132, (0, 16, 36), tag="s1")
-    put(d, "没成绩", (W / 2, 326), 132, WHITE, tag="a1")
-    put(d, "不能投档", (W / 2 + 3, 470), 132, (0, 16, 36), tag="s2")
-    put(d, "不能投档", (W / 2, 466), 132, GOLD, tag="a2")
+    put(d, "9月23日 10:00 开查", (W / 2, 206), 48, GOLD, tag="date")
+    put(d, "没成绩", (W / 2 + 3, 358), 132, (0, 16, 36), tag="s1")
+    put(d, "没成绩", (W / 2, 354), 132, WHITE, tag="a1")
+    put(d, "不能投档", (W / 2 + 3, 498), 132, (0, 16, 36), tag="s2")
+    put(d, "不能投档", (W / 2, 494), 132, GOLD, tag="a2")
     block(d, "官方原文：没有生物与地理（合卷）成绩的，录取时不能投档", 32,
-          LIGHT, 596, tag="n")
+          LIGHT, 624, tag="n")
     footer(d)
     gate("头条 封面3-答案大字")
     save(im, f"{PFX}-头条-封面3-答案大字-1200x900.png")
@@ -323,24 +325,26 @@ def art_roles():
 
 # ==================== 微头条配图 ====================
 def wt_numbers():
+    """微头条配图：**顶部即官方已定日期**（正文已改 v2，配图必须同步，否则图文不匹配）。"""
     im = base()
     decor_ticks(im)
     d = ImageDraw.Draw(im)
     badge(d)
-    block(d, "关于生地会考，记住 3 个数字", 46, WHITE, 150, tag="t")
+    put(d, "生地会考成绩 · 9月23日 10:00 开查", (W / 2, 162), 46, GOLD, tag="t")
+    block(d, "这 100 分，记住 3 个数字", 38, WHITE, 222, tag="t2")
     cards = [("100分", "生地会考满分", GOLD),
              ("0分", "计入中考总分", WHITE),
              ("第1层", "同分优先比它", GOLD)]
     cx = [230, 600, 970]
-    cw, cy, ch = 340, 320, 400
+    cw, cy, ch = 340, 312, 368
     for (num, lab, col), xc in zip(cards, cx):
         rcard(im, [xc - cw / 2, cy, xc + cw / 2, cy + ch], fa=18,
               outline=(255, 255, 255), oa=80, radius=26)
-        put(d, num, (xc + 3, cy + 132), 72, (0, 18, 40), tag="sh")
-        put(d, num, (xc, cy + 128), 72, col, tag="n")
-        d.line([xc - 66, cy + 250, xc + 66, cy + 250], fill=(255, 255, 255), width=2)
-        put(d, lab, (xc, cy + 300), 30, (240, 246, 252), bold=False, tag="l")
-    put(d, "没有成绩 = 不能投档 · 同分先比它", (W / 2, 790), 34, GOLD, tag="c")
+        put(d, num, (xc + 3, cy + 124), 72, (0, 18, 40), tag="sh")
+        put(d, num, (xc, cy + 120), 72, col, tag="n")
+        d.line([xc - 66, cy + 234, xc + 66, cy + 234], fill=(255, 255, 255), width=2)
+        put(d, lab, (xc, cy + 284), 30, (240, 246, 252), bold=False, tag="l")
+    put(d, "没有成绩 = 不能投档 · 同分先比它", (W / 2, 762), 34, GOLD, tag="c")
     footer(d)
     gate("头条 微头条配图-关键数字")
     save(im, f"{PFX}-头条-微头条配图-关键数字-1200x900.png")
