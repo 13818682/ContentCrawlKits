@@ -246,17 +246,17 @@ def art_times():
     d = ImageDraw.Draw(im)
     badge(d)
     block(d, "历年查分时间 · 都在 9 月，上午 10 点", 46, WHITE, 150, tag="t")
-    put(d, "2026 年具体日期以市招考办公告为准", (W / 2, 262), 26, LIGHT, bold=False, tag="sub")
+    put(d, "官方已公布：2026年 9月23日 10:00", (W / 2, 262), 28, GOLD, tag="sub")
     tx0, tx1 = 90, 1110
     rcard(im, [tx0, 306, tx1, 362], fa=26, radius=16)
     put(d, "年份", (330, 334), 30, WHITE, tag="h1")
     put(d, "成绩查询时间", (820, 334), 30, WHITE, tag="h2")
     rows = [
+        ("2026年", "9月23日 10:00", GOLD),
         ("2025年", "9月18日 10:00", WHITE),
         ("2024年", "9月19日 10:00", WHITE),
         ("2023年", "9月22日 10:00", WHITE),
         ("2022年", "10月10日 10:00", LIGHT),
-        ("2026年", "官方未发布 · 近期留意", GOLD),
     ]
     ry0, row_h = 372, 82
     for i, (y, v, col) in enumerate(rows):
@@ -348,8 +348,8 @@ def wt_numbers():
 
 if __name__ == "__main__":
     tt_cover(f"{PFX}-头条-封面1-主标题-1200x900.png",
-             ["生地会考成绩", "随时可能公布"],
-             "入口先存好 · 这 100 分的 4 个作用先看懂")
+             ["生地会考成绩", "9月23日 10:00 开查"],
+             "查分入口 · 三样东西 · 这 100 分的 4 个作用")
     cover_data()
     cover_answer()
     art_times()

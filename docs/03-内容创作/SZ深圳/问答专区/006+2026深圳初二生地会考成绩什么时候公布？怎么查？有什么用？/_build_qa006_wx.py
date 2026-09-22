@@ -195,17 +195,17 @@ def card_times():
     decor_ticks(im)
     d = ImageDraw.Draw(im)
     put(d, "历年查分时间 · 都在 9 月，上午 10 点", (450, 40), 34, WHITE, maxw=760, W=W, H=H, tag="t")
-    put(d, "2026 年具体日期以市招考办公告为准", (450, 76), 19, LIGHT, bold=False, W=W, H=H, tag="sub")
+    put(d, "官方已公布：2026年 9月23日 10:00", (450, 76), 20, GOLD, W=W, H=H, tag="sub")
     tx0, tx1 = 60, 840
     rcard(im, [tx0, 100, tx1, 140], fill_alpha=26, radius=16)
     put(d, "年份", (190, 120), 24, WHITE, W=W, H=H, tag="h1")
     put(d, "成绩查询时间", (560, 120), 24, WHITE, W=W, H=H, tag="h2")
     rows = [
+        ("2026年", "9月23日 10:00", GOLD),
         ("2025年", "9月18日 10:00", WHITE),
         ("2024年", "9月19日 10:00", WHITE),
         ("2023年", "9月22日 10:00", WHITE),
         ("2022年", "10月10日 10:00", LIGHT),
-        ("2026年", "官方未发布 · 近期留意", GOLD),
     ]
     ry0 = 146
     row_h = 44
@@ -214,7 +214,7 @@ def card_times():
         if i % 2 == 0:
             rcard(im, [tx0, ry, tx1, ry + row_h], fill_alpha=12, radius=12)
         put(d, y, (190, ry + row_h / 2), 25, (235, 243, 252), W=W, H=H, tag="y")
-        put(d, v, (560, ry + row_h / 2), 25 if i == 4 else 26, col, W=W, H=H, tag="v")
+        put(d, v, (560, ry + row_h / 2), 26, col, W=W, H=H, tag="v")
     gate("公众号数据卡1", W, H)
     save(im, f"{PFX}-公众号-数据卡1-历年查分时间-900x400.png")
 
@@ -328,9 +328,9 @@ def longimage():
     # ---- 钩子区 ----
     pill(W / 2, 56, "深圳中考 · 初二生地会考", 22, GOLD)
     P("生地会考成绩", 68, (W / 2, 158), WHITE, maxw=800, tag="h1")
-    P("什么时候出？", 68, (W / 2, 244), WHITE, maxw=800, tag="h2")
-    P("就在这几天", 108, (W / 2 + 3, 396), (0, 16, 36), tag="h3s")
-    P("就在这几天", 108, (W / 2, 392), GOLD, tag="h3")
+    P("什么时候查？", 68, (W / 2, 244), WHITE, maxw=800, tag="h2")
+    P("9月23日 上午10:00", 96, (W / 2 + 3, 396), (0, 16, 36), maxw=820, tag="h3s")
+    P("9月23日 上午10:00", 96, (W / 2, 392), GOLD, maxw=820, tag="h3")
     # 数据对撞：100 分 vs 计入总分 0 分
     box(70, 476, 760, 140, r=18, fa=16, outline=GOLD)
     d.line([450, 496, 450, 596], fill=GOLD, width=2)
@@ -338,22 +338,24 @@ def longimage():
     P("生地会考满分", 24, (285, 584), LIGHT, bold=False, tag="v1l")
     P("0分", 58, (640, 528), WHITE, tag="v2")
     P("计入中考总分", 24, (640, 584), LIGHT, bold=False, tag="v2l")
-    pill(W / 2, 668, "怎么查 · 历年时间 · 这 100 分的用处", 25, GOLD)
+    pill(W / 2, 668, "查分入口 · 三样东西 · 这 100 分的用处", 25, GOLD)
     d.line([60, 718, 250, 718], fill=GOLD, width=3)
 
-    # ---- 01 什么时候出 ----
+    # ---- 01 什么时候出（官方已定） ----
     chapter(778, "01 · 什么时候出？")
-    P("历年都在 9 月中下旬的上午 10:00 开放查询：", 21, (W / 2, 852), LIGHT, bold=False,
-      maxw=760, tag="p1")
-    times = [("2025年", "9月18日 10:00", GOLD), ("2024年", "9月19日 10:00", GOLD),
-             ("2023年", "9月22日 10:00", GOLD), ("2022年", "10月10日 10:00", LIGHT)]
-    ry = 890
+    P("官方已公布：成绩将于 9月23日 上午10:00 开放查询", 26, (W / 2, 852), GOLD,
+      maxw=800, tag="p1")
+    P("历年也都在 9 月中下旬、上午 10 点：", 20, (W / 2, 892), LIGHT, bold=False,
+      maxw=760, tag="p1b")
+    times = [("2025年", "9月18日 10:00", LIGHT), ("2024年", "9月19日 10:00", LIGHT),
+             ("2023年", "9月22日 10:00", LIGHT), ("2022年", "10月10日 10:00", LIGHT)]
+    ry = 916
     for y, v, col in times:
-        box(60, ry, W - 120, 62, r=12, fa=14)
-        P(y, 24, (200, ry + 31), WHITE, tag="ty")
-        P(v, 26, (600, ry + 31), col, tag="tv")
-        ry += 72
-    take(ry + 26, "2026 年官方尚未发布确切日期 · 以市招考办公告为准")
+        box(60, ry, W - 120, 56, r=12, fa=14)
+        P(y, 23, (200, ry + 28), WHITE, tag="ty")
+        P(v, 25, (600, ry + 28), col, tag="tv")
+        ry += 66
+    take(ry + 26, "以上为市招考办公告 · 以成绩查询页温馨提醒为准")
 
     # ---- 02 怎么查 ----
     chapter(1280, "02 · 怎么查？")
@@ -401,12 +403,12 @@ def longimage():
         P(n, 20, (78, ry + 74), WHITE, bold=False, anchor="lm", maxw=760, tag="mn")
         ry += 124
 
-    # ---- 05 给家长 ----
-    chapter(2760, "05 · 现在做这 3 件事")
+    # ---- 05 开查当天做3件事 ----
+    chapter(2760, "05 · 开查当天做这 3 件事")
     ry = 2830
-    for n, t in [("①", "关注我：出分当天第一时间贴入口与注意事项"),
-                 ("②", "把查分入口存进收藏夹，别等出分才翻"),
-                 ("③", "查分当天记下分数并截图核对，别等填志愿才找")]:
+    for n, t in [("①", "9月23日 10:00 一到就查，入口见上面那条路径"),
+                 ("②", "记下分数并截图核对，别等填志愿才回头找"),
+                 ("③", "关注我：分数怎么用、怎么和志愿挂钩，我接着讲")]:
         box(60, ry, W - 120, 74, r=14, fa=14)
         P(n, 24, (96, ry + 37), GOLD, tag="fn")
         P(t, 22, (140, ry + 37), WHITE, bold=False, anchor="lm", maxw=700, tag="ft")
@@ -416,7 +418,7 @@ def longimage():
     divy = ry + 40
     d.line([50, divy, W - 50, divy], fill=EDGE, width=2)
     P("关注我 · 深圳中考问答系列连载中", 32, (W / 2, divy + 46), GOLD, tag="cta")
-    P("成绩公布当天，我会同步更新查分入口与注意事项", 20, (W / 2, divy + 96), LIGHT,
+    P("分数查到了怎么用？下一期接着讲", 20, (W / 2, divy + 96), LIGHT,
       bold=False, tag="cta2")
     P(SRC, 18, (W / 2, divy + 140), SUB, bold=False, maxw=W - 80, tag="src")
     P("本文为政策信息整理，具体以深圳市教育局、市招考办正式公告为准", 17,
@@ -430,7 +432,7 @@ def longimage():
 if __name__ == "__main__":
     cover_jinglian()
     cover_jijian()
-    section(1, "一", "什么时候出", "历年都在 9 月中下旬 · 上午 10 点开放", "历年时间")
+    section(1, "一", "什么时候出", "官方已定：9月23日 上午10:00 开放查询", "历年时间")
     section(2, "二", "怎么查", "深圳招考网 · 考生号 ＋ 身份证后 6 位", "怎么查")
     section(3, "三", "有什么用", "不计入总分 · 但没它不能投档", "有什么用")
     card_times()
