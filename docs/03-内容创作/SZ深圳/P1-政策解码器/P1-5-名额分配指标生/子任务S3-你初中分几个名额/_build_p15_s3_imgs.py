@@ -433,7 +433,7 @@ def xhs_tail():
     put(d, "① 只能填 1 所公办普高", (WX / 2, 866), 36, WHITE, maxw=880, W=WX, H=HX, tag="b2")
     put(d, "② 与第一批次独立，普通生要再填一次", (WX / 2, 930), 34, WHITE, maxw=880,
         W=WX, H=HX, tag="b3")
-    put(d, "（完整拆解见主页合集「志愿规则」）", (WX / 2, 1160), 34, SUB, bold=False,
+    put(d, "（完整拆解见主页合集「深圳中考志愿规则」）", (WX / 2, 1160), 34, SUB, bold=False,
         maxw=920, W=WX, H=HX, tag="n1")
     put(d, "关注我，下一条讲：名额分配志愿怎么填不浪费", (WX / 2, 1244), 34, GOLD,
         maxw=960, W=WX, H=HX, tag="cta")

@@ -184,7 +184,7 @@ def tail():
     put(d, "这 100 分的 4 个作用", (WX / 2, 800), 42, GOLD, maxw=880, tag="b1")
     put(d, "① 没它不能投档　② 同分先比它", (WX / 2, 872), 36, WHITE, maxw=880, tag="b2")
     put(d, "③ 指标生批同样适用　④ 缺考可补考", (WX / 2, 932), 36, WHITE, maxw=880, tag="b3")
-    put(d, "（详见主页合集「志愿规则」）", (WX / 2, 1180), 34, SUB, bold=False, maxw=920, tag="n1")
+    put(d, "（详见主页合集「深圳中考志愿规则」）", (WX / 2, 1180), 34, SUB, bold=False, maxw=920, tag="n1")
     put(d, "关注我，下一条讲：生地分数怎么和选校挂钩", (WX / 2, 1258), 36, GOLD,
         maxw=960, tag="cta")
     put(d, "深圳中考 · 问答系列 006", (WX / 2, 1366), 28, SUB, bold=False, maxw=1000, tag="foot")
