@@ -185,7 +185,37 @@ def xhs_card(fn, kick, title, sub, tiles, rows, concl, gap=22, minh=104, rowfont
 
 # ---------- 5. 小红书 自查清单长图 1080×2400（收藏资产）----------
 
+def tt_card_0926():
+    """头条微头条配图：1200×900 横版「3 关键数字」（依 13-2 模板版式）。"""
+    W, H, HM = 1200, 900, 60
+    im = base(W, H); d = ImageDraw.Draw(im)
+    txt(d, "深圳中考 · 非深户", (W / 2, 74), 30, GOLD, maxw=W - 2 * HM, mini=22, tag="tk")
+    txt(d, "难的不是名校，是中间那一档", (W / 2, 168), 52, WHITE,
+        maxw=W - 2 * HM, mini=36, tag="tt")
+    n, gap = 3, 30
+    bw = (W - 2 * HM - gap * (n - 1)) / n
+    y0, y1 = 262, 620
+    tiles = [("23%", "D 类占公办计划"), ("0分", "四大名校 AC / D 差"), ("29分", "最大差距（曙光中学）")]
+    for i, (num, lab) in enumerate(tiles):
+        x = HM + i * (bw + gap)
+        rcard(d, x, y0, x + bw, y1, rad=24)
+        txt(d, num, (x + bw / 2, y0 + (y1 - y0) * 0.36), 84, GOLD,
+            maxw=bw - 30, mini=50, tag="tn")
+        txt(d, lab, (x + bw / 2, y0 + (y1 - y0) * 0.76), 26, SUB, fp=FR,
+            maxw=bw - 26, mini=18, tag="tl")
+    txt(d, "D 类 18,506 人　·　AC 类 61,797 人", (W / 2, 692), 30, LIGHT, fp=FR,
+        maxw=W - 2 * HM, mini=22, tag="tm")
+    txt(d, "数据来源：深圳市教育局正式发布的 2026 年高中阶段学校招生计划",
+        (W / 2, 848), 20, SUB, fp=FR, maxw=W - 2 * HM, mini=14, tag="tf")
+    bad = [(t, tuple(int(v) for v in bb)) for t, bb in BADS
+           if bb[0] < 14 or bb[1] < 6 or bb[2] > W - 14 or bb[3] > H - 6]
+    print(("OK  " if not bad else "!!  ") + "头条微头条配图", bad if bad else "")
+    BADS.clear()
+    save_img(im, f"{ROOT}/03-配图/{PFX}-头条-微头条配图-3关键数字-1200x900.png")
+
+
 if __name__ == "__main__":
+    tt_card_0926()
     xhs_cover_0926()
     xhs_card(f"{PFX}-小红书-正文图1-D类必看的两张表-1080x1440.png",
              "深圳中考 · D 类",
