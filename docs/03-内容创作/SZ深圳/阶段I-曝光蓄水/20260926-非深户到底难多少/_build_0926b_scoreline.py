@@ -18,7 +18,10 @@ GOLD, WHITE = (255, 210, 120), (255, 255, 255)
 LIGHT, SUB = (176, 208, 246), (214, 230, 252)
 
 BADS = []
-PFX = "阶段I-20260926-录取分数线-B"
+# 配图命名（经营者 2026-09-26 定）：发布日期-平台-文稿类型-标题
+# 与「PNG 实体 / md frontmatter images / 本脚本 save_img()」三处同步，勿只改一处
+PFX = "20260926"                    # 发布日期
+TTL = "2026公办高中录取线分档"        # 标题（与文稿文件名末段一致）
 ROOT = ("E:/1.HSEE/6.ContentCrawlKits/docs/03-内容创作/SZ深圳/"
         "阶段I-曝光蓄水/20260926-非深户到底难多少")
 SRC_SCHOOL = ("E:/1.HSEE/6.ContentCrawlKits/docs/03-内容创作/SZ深圳/"
@@ -132,7 +135,7 @@ def tt_card():
            if bb[0] < 14 or bb[1] < 6 or bb[2] > W - 14 or bb[3] > H - 6]
     print(("OK  " if not bad else "!!  ") + "头条配图", bad if bad else "")
     BADS.clear()
-    save_img(im, f"{ROOT}/03-配图/{PFX}-头条-微头条配图-3关键数字-1200x900.png")
+    save_img(im, f"{ROOT}/03-配图/{PFX}-今日头条-微头条配图-{TTL}.png")
 
 
 # ---------------- 2. 小红书封面 1080×1440 ----------------
@@ -152,7 +155,7 @@ def xhs_cover():
     for t, bb in BADS:
         assert bb[0] >= 20 and bb[2] <= W - 20 and bb[3] <= H - 10, (t, bb)
     print("OK 小红书封面"); BADS.clear()
-    save_img(im, f"{ROOT}/03-配图/{PFX}-小红书-封面-录取线分档-1080x1440.png")
+    save_img(im, f"{ROOT}/03-配图/{PFX}-小红书-封面-{TTL}.png")
 
 
 # ---------------- 3. 小红书分档长图 ----------------
@@ -193,7 +196,7 @@ def xhs_long():
            if bb[0] < 16 or bb[1] < 6 or bb[2] > W - 16 or bb[3] > h - 6]
     print(("OK  " if not bad else "!!  ") + f"小红书长图 {W}x{h}", bad if bad else "")
     BADS.clear()
-    save_img(im, f"{ROOT}/03-配图/{PFX}-小红书-长图-录取线分档-1080x{h}.png")
+    save_img(im, f"{ROOT}/03-配图/{PFX}-小红书-长图-{TTL}.png")
 
 
 if __name__ == "__main__":

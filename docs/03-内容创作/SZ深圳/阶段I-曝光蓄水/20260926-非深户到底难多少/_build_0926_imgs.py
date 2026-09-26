@@ -100,7 +100,10 @@ def rcard(d, x0, y0, x1, y1, rad=24, outline=None):
 
 
 WX, HX, HM = 1080, 1440, 80
-PFX = "阶段I-20260926-非深户到底难多少"
+# 配图命名（经营者 2026-09-26 定）：发布日期-平台-文稿类型-标题
+# 与「PNG 实体 / md frontmatter images / 本脚本 save_img()」三处同步，勿只改一处
+PFX = "20260926"            # 发布日期
+TTL = "非深户到底难多少"      # 标题（与文稿文件名末段一致）
 SRC = "数据来源：深圳市教育局正式发布的 2026 年高中阶段学校招生计划"
 ROOT = ("E:/1.HSEE/6.ContentCrawlKits/docs/03-内容创作/SZ深圳/"
         "阶段I-曝光蓄水/20260926-非深户到底难多少")
@@ -119,7 +122,7 @@ def xhs_cover_0926():
     for t, bb in BADS:
         assert bb[0] >= 20 and bb[2] <= WX - 20 and bb[3] <= HX - 10, (t, bb)
     print("OK 小红书封面"); BADS.clear()
-    save_img(im, f"{ROOT}/03-配图/{PFX}-小红书-封面-深中592对592-1080x1440.png")
+    save_img(im, f"{ROOT}/03-配图/{PFX}-小红书-封面-{TTL}.png")
 
 
 def xhs_card(fn, kick, title, sub, tiles, rows, concl, gap=22, minh=104, rowfont=None,
@@ -211,13 +214,13 @@ def tt_card_0926():
            if bb[0] < 14 or bb[1] < 6 or bb[2] > W - 14 or bb[3] > H - 6]
     print(("OK  " if not bad else "!!  ") + "头条微头条配图", bad if bad else "")
     BADS.clear()
-    save_img(im, f"{ROOT}/03-配图/{PFX}-头条-微头条配图-3关键数字-1200x900.png")
+    save_img(im, f"{ROOT}/03-配图/{PFX}-今日头条-微头条配图-{TTL}.png")
 
 
 if __name__ == "__main__":
     tt_card_0926()
     xhs_cover_0926()
-    xhs_card(f"{PFX}-小红书-正文图1-D类必看的两张表-1080x1440.png",
+    xhs_card(f"{PFX}-小红书-正文图1-{TTL}.png",
              "深圳中考 · D 类",
              "两张表看清：非深户难在哪",
              "2026 年官方数据 · 一张不差",
