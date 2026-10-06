@@ -3,14 +3,18 @@
 
 - 蓝系家族：沿用 09-26~10-05 档调色与「左上主光」（`blue-family-visual-rule`）
 - **数据（全部回单一官方源，见 03-合规检查清单.md §一）**：
-    源 A＝《2026年公办普通高中学校招生计划表》「区域」列 → 公办普高 **99** 所、其中「市直属」**47** 所、
-           「龙岗区」**8** 所；区属合计 = 99 − 47 = **52**。
+    源 A＝《2026年公办普通高中学校招生计划表》「区域」列 → 「龙岗区」**8** 所；全市分到各区合计 **53** 所。
     源 B＝《2026年高中阶段学校第一批录取标准》→ 龙岗区属 8 所的 AC/D 类 **住宿线 · 走读线**。
+- **⚠️ 2026-10-06 更正（本脚本 v2.1）**：本脚本曾写「公办普高 **99** 所 / 市直属 **47** 所」。
+  10-06 熔断复检把官方表重数了一遍，**同一张表的去重口径有二义**——按**序号**是 100 / 市直属 47；
+  按**校名**是 101 / 48。**99 在两套口径下都不成立**（旧记忆值的错）。故本脚本与 10-07 宝安稿同规：
+  **一律回避「总数」与「市直属所数」，只使用两个口径无关的数——「各区合计 53」与「龙岗区 8」。**
+  详见 `docs/15-运营数据/SZ深圳/2026年/20261006/20261006-四平台运营数据分析（阶段I熔断复检…）.md`。
 - **⚠️ v1 已作废**：v1 用 `P3-10`/`P3-2` 的分区（龙岗 13 所），经两台数据源交叉后判定不可靠
   （漏 布吉中学 / 华中师范大学龙岗附属中学；误收 深高文博高中 / 深实验至臻高中）。
 - **脚本内含 5 条断言**，任一不成立即报错：
     ① 恰好 8 所；② 有住宿线的 7 所 AC 住宿线严格降序；③ 该 7 所区间＝504~576；
-    ④ 该 7 所中 D 住宿 > AC 住宿 的恰好 6 所；⑤ 99 − 47 = 52（区属合计自洽）。
+    ④ 该 7 所中 D 住宿 > AC 住宿 的恰好 6 所；⑤ 各区合计 = 53 且 龙岗区 = 8（口径自洽）。
 - **⚠️ 零评价性表述**：只出现校名与分数线，不出现「四大/八大/梯队/名校/天花板/最好」。
 - 产出（命名 = 发布日期-时间-平台-文稿类型-标题，经营者 2026-09-26 定）：
     20261004-1900-今日头条-微头条配图-龙岗区属公办高中8所.png   1200x900
@@ -51,10 +55,12 @@ LG = [
     ("布吉中学",              None, 492, None, 515),
 ]
 
-TOT_SCHOOLS = 99   # 官方《招生计划表》公办普高学校数（按校名去重）
-CITY_DIRECT = 47   # 其中「市直属」
+TOT_SCHOOLS = None   # ⚠️ 总数 100 或 101 取决于去重口径，本案**不对外使用**，见文件头说明
+CITY_DIRECT = None   # ⚠️ 同上（47 或 48）
 LG_N = len(LG)
-QU_SHU = TOT_SCHOOLS - CITY_DIRECT   # 区属合计
+BY_AREA = {"宝安区": 10, "龙华区": 9, "龙岗区": 8, "罗湖区": 6, "南山区": 6, "福田区": 5,
+           "光明区": 3, "盐田区": 2, "坪山区": 2, "大鹏新区": 2}
+QU_SHU = sum(BY_AREA.values())   # 全市分到各区的公办普高合计（与去重口径无关）
 
 BOARD = [r for r in LG if r[1] is not None]        # 有住宿线的 7 所
 ACS = [r[1] for r in BOARD]
@@ -67,7 +73,7 @@ assert LG_N == 0 or BOARD and all(r[1] is not None for r in BOARD)
 assert ACS == sorted(ACS, reverse=True), ACS                             # ②
 assert (HI, LO) == (576, 504), (HI, LO)                                  # ③
 assert DUP == 6, DUP                                                     # ④
-assert TOT_SCHOOLS - CITY_DIRECT == QU_SHU == 52, QU_SHU                 # ⑤
+assert QU_SHU == 53 and BY_AREA["龙岗区"] == LG_N == 8, (QU_SHU, LG_N)   # ⑤
 assert len(BOARD) == 7 and BELOW == 5 and len(LG) - len(BOARD) == 1
 
 BADS = []
@@ -130,7 +136,7 @@ def tt_card():
     bw = (W - 2 * HM - gap * (n - 1)) / n
     y0, y1 = 234, 566
     tiles = [(f"{LG_N} 所", "龙岗区属公办高中\n（官方「区域」列）", GOLD),
-             (f"{CITY_DIRECT} 所", f"市直属·官方不划区\n（公办普高共 {TOT_SCHOOLS} 所）", RED),
+             (f"{QU_SHU} 所", "全市分到各区的公办普高\n其余标「市直属」·不划进任何区", RED),
              (f"{LO}–{HI}", f"区属 AC 类住宿线区间\n{len(BOARD)} 所有住宿 · 跨度 {HI - LO} 分", GOLD)]
     for i, (num, lab, col) in enumerate(tiles):
         x = HM + i * (bw + gap)
@@ -169,15 +175,13 @@ def tt_card():
 def xhs_cover():
     W, H = 1080, 1440
     im = base(W, H); d = ImageDraw.Draw(im)
-    txt(d, "深圳中考 · 龙岗区", (W / 2, 140), 44, GOLD, maxw=1000, mini=30, tag="ct")
-    txt(d, "按官方口径", (W / 2, 292), 52, SUB, maxw=1000, mini=34, tag="ca")
-    txt(d, "龙岗区公办高中", (W / 2, 400), 76, WHITE, maxw=1010, mini=50, tag="ct2")
-    txt(d, "只有 8 所？", (W / 2, 512), 76, WHITE, maxw=1010, mini=50, tag="ct3")
-    d.line([W / 2 - 300, 626, W / 2 + 300, 626], fill=GOLD, width=8)
-    txt(d, f"深圳 {TOT_SCHOOLS} 所公办普高", (W / 2, 744), 44, LIGHT, maxw=1000, mini=30, tag="ck0")
-    txt(d, f"{CITY_DIRECT} 所是市直属", (W / 2, 846), 62, RED, maxw=1010, mini=42, tag="ck1")
-    txt(d, "官方不划进任何区", (W / 2, 946), 44, SUB, maxw=1000, mini=30, tag="ck2")
-    txt(d, f"区属合计 {QU_SHU} 所", (W / 2, 1060), 34, SUB, fp=FR, maxw=1000, mini=23, tag="ck3")
+    txt(d, "深圳中考 · 龙岗区", (W / 2, 150), 44, GOLD, maxw=1000, mini=30, tag="ct")
+    txt(d, "按官方口径", (W / 2, 330), 52, SUB, maxw=1000, mini=34, tag="ca")
+    txt(d, "龙岗区公办高中", (W / 2, 458), 80, WHITE, maxw=1010, mini=52, tag="ct2")
+    txt(d, f"只有 {LG_N} 所？", (W / 2, 586), 80, WHITE, maxw=1010, mini=52, tag="ct3")
+    d.line([W / 2 - 300, 716, W / 2 + 300, 716], fill=GOLD, width=8)
+    txt(d, f"全市分到各区的只有 {QU_SHU} 所", (W / 2, 940), 50, RED, maxw=1010, mini=34, tag="ck1")
+    txt(d, "其余都标「市直属」·不划进任何区", (W / 2, 1050), 38, SUB, maxw=1000, mini=28, tag="ck2")
     txt(d, "深圳中考 · 择校必备 · 收藏不迷路", (W / 2, 1352), 27, SUB, fp=FR,
         maxw=1000, mini=20, tag="cf")
     bad = [(t, tuple(int(v) for v in bb)) for t, bb in BADS
@@ -192,7 +196,7 @@ def xhs_card():
     W, H, HM = 1080, 1440, 50
     im = base(W, H); d = ImageDraw.Draw(im)
 
-    txt(d, "龙岗区属公办高中（8 所）", (W / 2, 56), 40, WHITE,
+    txt(d, f"龙岗区属公办高中（{LG_N} 所）", (W / 2, 56), 40, WHITE,
         maxw=W - 2 * HM, mini=27, tag="h1")
     txt(d, "2026 年第一批录取标准 · 住宿线 / 走读线", (W / 2, 98), 22, SUB, fp=FR,
         maxw=W - 2 * HM, mini=16, tag="h2")
@@ -228,10 +232,10 @@ def xhs_card():
     rcard(d, HM, y, W - HM, y + 136, rad=14, outline=EDGE, fill=(10, 28, 62))
     txt(d, "为什么「只有」8 所？", (HM + 26, y + 36), 25, GOLD, fp=FR,
         maxw=W - 2 * HM - 52, mini=17, anchor="lm", tag="p0")
-    txt(d, f"官方《招生计划表》里，公办普高共 {TOT_SCHOOLS} 所，其中 {CITY_DIRECT} 所标「市直属」——"
-           f"不划入任何区。", (HM + 26, y + 76), 19, SUB, fp=FR,
+    txt(d, f"官方《招生计划表》里，全市只有 {QU_SHU} 所公办普高分到各区，龙岗区 {LG_N} 所。",
+        (HM + 26, y + 76), 19, SUB, fp=FR,
         maxw=W - 2 * HM - 52, mini=13, anchor="lm", tag="p1")
-    txt(d, f"区属合计 {QU_SHU} 所，龙岗区 {LG_N} 所。市直属的那些面向全市招生，按区查不到。",
+    txt(d, "其余都标「市直属」，面向全市招生，不划进任何区，按区查不到。",
         (HM + 26, y + 106), 19, SUB, fp=FR, maxw=W - 2 * HM - 52, mini=13,
         anchor="lm", tag="p2")
     y += 136 + 22
@@ -271,7 +275,7 @@ def xhs_card():
 
 
 if __name__ == "__main__":
-    print(f"实算：公办普高 {TOT_SCHOOLS} 所 / 市直属 {CITY_DIRECT} 所 / 区属 {QU_SHU} 所 / 龙岗 {LG_N} 所")
+    print(f"实算：全市分到各区 {QU_SHU} 所 / 龙岗区 {LG_N} 所")
     print(f"      有住宿线 {len(BOARD)} 所，AC {LO}~{HI}，低于 560 共 {BELOW} 所，D 类更高 {DUP} 所")
     tt_card()
     xhs_cover()
