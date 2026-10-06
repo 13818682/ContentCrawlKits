@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第01篇-公众号图文样板</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F2A4A'/%3E%3Cpath d='M9 23V9l14 3v11' fill='none' stroke='%23D4A843' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M9 23h14' stroke='%23F4F1EA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #ECEFF2;
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    color: #2B2B2B;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 760px; margin: 0 auto; background: #fff; box-shadow: 0 2px 24px rgba(15,42,74,.10); }
+  .masthead {
+    background: #0F2A4A;
+    color: #F4F1EA;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    letter-spacing: .06em;
+  }
+  .masthead .col { color: #D4A843; font-weight: 700; }
+  .masthead .tag { color: #8FB4D6; }
+  .cover { display: block; width: 100%; height: auto; }
+  .body { padding: 34px 42px 46px; }
+  h1 {
+    font-size: 27px;
+    line-height: 1.45;
+    color: #0F2A4A;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: .01em;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #7A8794;
+    border-bottom: 1px solid #EDEFF2;
+    padding-bottom: 18px;
+    margin-bottom: 26px;
+    letter-spacing: .03em;
+  }
+  p { margin: 0 0 20px; font-size: 16.5px; }
+  p.lead::first-letter { color: #D4A843; font-weight: 800; }
+  strong { color: #0F2A4A; }
+  h2 {
+    font-size: 20px;
+    color: #0F2A4A;
+    margin: 40px 0 16px;
+    padding-left: 14px;
+    border-left: 4px solid #D4A843;
+    line-height: 1.4;
+  }
+  .quote {
+    background: #F7F4EC;
+    border-left: 4px solid #D4A843;
+    padding: 14px 18px;
+    margin: 0 0 20px;
+    color: #5A5342;
+    font-size: 16.5px;
+  }
+  .inline-img { display: block; width: 100%; height: auto; margin: 24px 0 8px; }
+  .img-cap { font-size: 12.5px; color: #9AA5B0; text-align: center; margin: 0 0 24px; }
+  /* 同一所学校四个分数线：卡片式图表 */
+  .scores { margin: 22px 0 8px; }
+  .scores .hd {
+    background: #0F2A4A;
+    color: #D4A843;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 10px 10px 0 0;
+  }
+  .scores .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background: #0A1E38;
+    padding: 12px;
+    border-radius: 0 0 10px 10px;
+  }
+  .scores .cell {
+    background: #16375E;
+    border: 1px solid #2E5A8C;
+    border-radius: 8px;
+    padding: 12px 6px;
+    text-align: center;
+  }
+  .scores .cell .k { font-size: 12px; color: #8FB4D6; margin-bottom: 6px; }
+  .scores .cell .v { font-size: 26px; color: #D4A843; font-weight: 800; }
+  .scores .note { font-size: 12.5px; color: #9AA5B0; margin-top: 10px; }
+  /* 四份文件示意图 */
+  .files { margin: 22px 0 8px; }
+  .files .hd {
+    background: #0F2A4A;
+    color: #D4A843;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 10px 10px 0 0;
+  }
+  .files .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background: #0A1E38;
+    padding: 12px;
+    border-radius: 0 0 10px 10px;
+  }
+  .files .cell {
+    background: #16375E;
+    border: 1px solid #2E5A8C;
+    border-radius: 8px;
+    padding: 14px 8px;
+    text-align: center;
+  }
+  .files .cell .ic {
+    width: 34px; height: 42px;
+    margin: 0 auto 8px;
+    border: 2px solid #8FB4D6;
+    border-radius: 3px;
+    position: relative;
+  }
+  .files .cell .ic::after {
+    content: "";
+    position: absolute; left: 7px; right: 7px; top: 9px;
+    height: 2px; background: #8FB4D6;
+    box-shadow: 0 7px 0 #8FB4D6, 0 14px 0 #8FB4D6;
+  }
+  .files .cell .t { font-size: 14px; color: #F4F1EA; font-weight: 700; margin-bottom: 4px; }
+  .files .cell .s { font-size: 12px; color: #8FB4D6; }
+  .tail {
+    background: #F4F6F8;
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-top: 34px;
+    font-size: 13.5px;
+    color: #5A6570;
+  }
+  .tail b { color: #0F2A4A; }
+  .notice {
+    background: #0F2A4A;
+    color: #8FB4D6;
+    font-size: 12.5px;
+    padding: 18px 22px;
+    line-height: 1.7;
+    margin-top: 0;
+  }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #A8B1BA;
+    padding: 26px 20px 34px;
+    letter-spacing: .08em;
+  }
+  @media (max-width: 640px) {
+    .body { padding: 24px 22px 34px; }
+    h1 { font-size: 22px; }
+    p { font-size: 16px; }
+    .scores .grid, .files .grid { grid-template-columns: repeat(2, 1fr); }
+    .masthead { padding: 12px 18px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="masthead">
+      <span class="col">小洁查志愿</span>
+      <span class="tag">深莞广佛 四城中考 · 系列图文样板</span>
+    </div>
+
+    <img class="cover" src="第01篇-一个妈妈的深夜提问-公众号-封面.png" alt="第01篇封面">
+
+    <div class="body">
+
+      <h1>中考志愿怎么报？查了两周攻略，越看心里越没底</h1>
+      <div class="subtitle">深莞广佛四城中考志愿一查就明白 · "HSEE择校助手"小程序诞生记 · 第 1 篇</div>
+
+      <p class="lead">晚上十一点多，家长群里弹出一条消息。</p>
+      <p>"请教一下，XX 中学和 YY 中学，中考志愿到底选哪个好？"</p>
+      <p>群里一百多号人。等了十几分钟，只有两个人回：一个说"我家也在纠结"，另一个发了个叹气的表情。</p>
+      <p>没有人答得上来。</p>
+      <p>我是小洁，做教育快十年了。这样的场面，我不是第一次见到。但前几天，一位妈妈找我聊，她说的一句话，我一直记着——</p>
+      <div class="quote"><strong>"查了两周中考志愿攻略，越看心里越没底。"</strong></div>
+      <p>可听她讲完那两周，我更确定了一件事：攻略她已经攒了一堆，<strong>缺的是一个能直接给结果、还能追溯来源的方案</strong>。</p>
+
+      <h2>两周时间，她攒下了什么</h2>
+      <img class="inline-img" src="第01篇-一个妈妈的深夜提问-公众号-插图01-深夜书桌.png" alt="深夜书桌插图">
+      <p class="img-cap">深夜十一点，手机屏幕还亮着——插图示意</p>
+      <p>她把手机翻给我看：每天晚上七点到八点，下班回家的路上，她塞着耳机听中考升学的直播，前前后后听了十几场；深夜十一点，还在家长群里问"XX 和 YY 到底哪个好"。</p>
+      <p>手机里攒着几十页攻略，表格一张接一张，来回翻看费时费力。她说，光"录取规则"就分好几层：刚看完第一批次（深圳录取分批次进行，第一批是普通高中）的规则，翻两页又出现"名额分配"（高中把一部分学位直接分给初中学校，各校分到的名额不一样），再翻几页还有"末位同分比较"（同分时按规则依次比较单科成绩，决定谁先录取）。这些概念都很陌生，录取流程和规则细节也搞不清；网上搜出来的数字，有的没标出处，有的标了出处却对不上原文。</p>
+      <p>查了两周，越查心越乱。</p>
+      <p>我说，你把孩子的基础资料给我，我帮你分析一遍吧。作为从业者，这些政策我查过、算过、跟过录取结果，心里有数。</p>
+      <p>可换作一个普通家长，要自己弄清这些规则、还要查阅数据，完全是另一回事。就拿深圳来说，2026 年招生的普通高中就有 150 所，另有中职技工学校 30 所；志愿还分好几个批次，往前还要看前几年的数据。<strong>150 所学校摆在面前，光筛出"哪些值得看"这一步，就足够一个外行走丢。</strong></p>
+
+      <h2>查到了，也不敢信</h2>
+      <p>有些数据<strong>查到了也不敢信</strong>。</p>
+      <p>同一所学校、同一年，能查出来好几个不一样的数字。你多查几个来源，反而更糊涂。</p>
+      <p>举个例子：深圳实验学校崇文高中 2026 年录取分数线，有人说是 529，有人说只要 506 就够了。</p>
+      <p>到底哪个数据是准的？真实情况是——分数线按"住宿/走读、AC 类/D 类"分成了四条，每一句都有人传错：</p>
+
+      <div class="scores">
+        <div class="hd">同一所学校 · 2026 年录取分数线（按考生类型分四条）</div>
+        <div class="grid">
+          <div class="cell"><div class="k">住宿 · D 类</div><div class="v">529</div></div>
+          <div class="cell"><div class="k">走读 · D 类</div><div class="v">515</div></div>
+          <div class="cell"><div class="k">住宿 · AC 类</div><div class="v">506</div></div>
+          <div class="cell"><div class="k">走读 · AC 类</div><div class="v">471</div></div>
+        </div>
+        <div class="note">同一所学校、同一年，四条线——每一句都有人传错。</div>
+      </div>
+
+      <p>而这些数还不在一处。去年的录取线在一份表里；每所学校招多少人，在另一份表里；名额分配分到多少，又是一份；到底怎么报、该注意什么，还在考生手册里。</p>
+
+      <div class="files">
+        <div class="hd">要准确分析和判断，要查阅四份文件</div>
+        <div class="grid">
+          <div class="cell"><div class="ic"></div><div class="t">录取线表</div><div class="s">去年的录取线</div></div>
+          <div class="cell"><div class="ic"></div><div class="t">招生计划表</div><div class="s">每校招多少人</div></div>
+          <div class="cell"><div class="ic"></div><div class="t">名额分配表</div><div class="s">各校分到多少</div></div>
+          <div class="cell"><div class="ic"></div><div class="t">考生手册</div><div class="s">怎么报、注意什么</div></div>
+        </div>
+      </div>
+
+      <p><strong>要准确分析和判断，要查阅四份文件。</strong></p>
+      <p>这位妈妈说："看了两周越看越乱。要是有人能一次帮我都理清楚，那是真帮了大忙。"</p>
+      <p>我听完，心里很明白她的焦虑。</p>
+
+      <h2>家长要的，不是先变成内行</h2>
+      <p>官方文件写得全、写得准，可它不是为"一个没有经验的家长"写的。</p>
+      <p><strong>中考志愿填报这件事本身就复杂。</strong>如果我不是在这个行业做了近十年，也会和家长一样心里没底。</p>
+      <p>事实上，这些年为了把一件事说明白，我自己也没少花时间：同一份数据，教育局官网是一种说法，自媒体是一种说法，学校招办又是另一种说法。只能一份份翻原文、对口径，标上年份才敢用。<strong>耗时，费力，也煎熬。</strong>我尚且如此，一个白天上班、晚上才有空查资料的家长，怎么可能两周内变成内行？</p>
+      <p>所以我想，家长不该先花两周去学规则、学术语、学数据口径。</p>
+      <p><strong>该有人先替他们把这件事查清楚，再原原本本地交到他们手里。</strong></p>
+
+      <h2>为什么是我来做这件事</h2>
+      <p>这个念头，就是那位妈妈给我的。</p>
+      <p>她来找我的那天晚上，把几十页攻略和四份文件的截图摊在我面前。那一刻我想的是：这些资料我都查过、都整理过，把它们理成一份"直接能给结果、还能追溯来源"的方案，正是我做了十年的事。</p>
+      <p><strong>有一件事我已经定下来了：今年第四季度，设计一个方便、专业的中考志愿填报小程序，先请一批家长进来试用。</strong></p>
+      <p>怎么保证数据准确？我的想法是：<strong>只认最新的官方正式文件，不听道听途说。</strong>不同的说法，以更新的那份为准，每一份都标上年份。</p>
+      <p>怎么让家长看得懂？给出的方案要清晰、直接，一眼看明白。</p>
+
+      <h2>那位妈妈的提问，我还欠她一个回答</h2>
+      <p>接下来我会一段一段往下写：它怎么来的、我打算怎么做、中间会遇到什么。</p>
+      <p>那位妈妈的提问，我还欠她一个正式的回答。因为深莞广佛四城，答案从来不是一个——每一城的批次、名额分配、录取口径都不一样，一篇写不完，所以有了这个系列。</p>
+      <p>如果你也是四城的家长，或者正在为志愿填报头疼，欢迎把你的情况说给我听。下一篇，我先写写这四城到底差在哪。</p>
+
+      <div class="tail">
+        <b>小洁</b>｜做教育快十年。这些年，为了把一件事说明白，光查资料就要花掉大量时间和精力。耗时，费力，也煎熬。所以我想，能不能有个工具软件，直接把结果交到他们手里。
+      </div>
+
+    </div>
+
+    <div class="notice">
+      本文涉及的招生学校数量、录取批次与分数线口径，参考深圳市教育局发布的 2026 年招生文件与录取标准；具体口径请以官方最新发布为准。文中部分校名与家长昵称已做匿名处理。
+    </div>
+
+    <div class="footer">小洁查志愿 · 深莞广佛 四城中考 · 系列第 01 篇图文样板</div>
+
+  </div>
+</body>
+</html>
