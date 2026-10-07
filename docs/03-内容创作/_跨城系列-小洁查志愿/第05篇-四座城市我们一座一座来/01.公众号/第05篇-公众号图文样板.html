@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第05篇-公众号图文样板</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F2A4A'/%3E%3Cpath d='M9 23V9l14 3v11' fill='none' stroke='%23D4A843' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M9 23h14' stroke='%23F4F1EA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #ECEFF2;
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    color: #2B2B2B;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 760px; margin: 0 auto; background: #fff; box-shadow: 0 2px 24px rgba(15,42,74,.10); }
+  .masthead {
+    background: #0F2A4A;
+    color: #F4F1EA;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    letter-spacing: .06em;
+  }
+  .masthead .col { color: #D4A843; font-weight: 700; }
+  .masthead .tag { color: #8FB4D6; }
+  .cover { display: block; width: 100%; height: auto; }
+  .body { padding: 34px 42px 46px; }
+  h1 {
+    font-size: 27px;
+    line-height: 1.45;
+    color: #0F2A4A;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: .01em;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #7A8794;
+    border-bottom: 1px solid #EDEFF2;
+    padding-bottom: 18px;
+    margin-bottom: 26px;
+    letter-spacing: .03em;
+  }
+  p { margin: 0 0 20px; font-size: 16.5px; }
+  p.lead::first-letter { color: #D4A843; font-weight: 800; }
+  strong { color: #0F2A4A; }
+  h2 {
+    font-size: 20px;
+    color: #0F2A4A;
+    margin: 40px 0 16px;
+    padding-left: 14px;
+    border-left: 4px solid #D4A843;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 17px;
+    color: #0F2A4A;
+    margin: 26px 0 12px;
+    padding-left: 10px;
+    border-left: 3px solid #8FB4D6;
+    line-height: 1.4;
+  }
+  .quote {
+    background: #F7F4EC;
+    border-left: 4px solid #D4A843;
+    padding: 14px 18px;
+    margin: 0 0 20px;
+    color: #5A5342;
+    font-size: 16.5px;
+  }
+  .inline-img { display: block; width: 100%; height: auto; margin: 24px 0 8px; }
+  .img-cap { font-size: 12.5px; color: #9AA5B0; text-align: center; margin: 0 0 24px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 22px;
+    font-size: 15px;
+    table-layout: fixed;
+  }
+  th, td { border: 1px solid #DDE3E8; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #0F2A4A; color: #F4F1EA; font-weight: 700; }
+  tr:nth-child(even) td { background: #F7F9FA; }
+  ul { margin: 0 0 20px 1.4em; font-size: 16.5px; }
+  li { margin-bottom: 10px; }
+  .tail {
+    background: #F4F6F8;
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-top: 34px;
+    font-size: 13.5px;
+    color: #5A6570;
+  }
+  .tail b { color: #0F2A4A; }
+  .notice {
+    background: #0F2A4A;
+    color: #8FB4D6;
+    font-size: 12.5px;
+    padding: 18px 22px;
+    line-height: 1.7;
+  }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #A8B1BA;
+    padding: 26px 20px 34px;
+    letter-spacing: .08em;
+  }
+  @media (max-width: 640px) {
+    .body { padding: 24px 22px 34px; }
+    h1 { font-size: 22px; }
+    p, ul { font-size: 16px; }
+    table { font-size: 14px; }
+    th, td { padding: 8px 10px; }
+    .masthead { padding: 12px 18px; font-size: 12px; }
+  }
+
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="masthead">
+      <span class="col">小洁查志愿</span>
+      <span class="tag">深莞广佛 四城中考 · 系列图文样板</span>
+    </div>
+
+    <img class="cover" src="第05篇-四座城市我们一座一座来-公众号-封面.png" alt="第05篇封面">
+
+    <div class="body">
+
+      <h1>中考志愿：四座城市，我们一座一座来</h1>
+      <div class="subtitle">深莞广佛四城中考志愿一查就明白 · “HSEE择校助手”小程序诞生记 · 第 5 篇</div>
+
+
+      <p class="lead">前几天，一位东莞的家长找到我。</p>
+      <p>她说，她在家长群里看到我们给深圳家长整理的那些东西——深圳的招生文件、历年录取标准，都已经理出来了。她问我：<strong>能不能也帮东莞的家长做一份？</strong></p>
+      <p>问完，她又补了一句：</p>
+      <div class="quote"><strong>“这两个城市，是不是差不多？”</strong></div>
+      <p>第二个问题，我得认真答：<strong>不一样。</strong></p>
+      <p>而且不是“细节上有点差别”的那种不一样——是<strong>从第一件事开始，就不是同一套东西。</strong></p>
+
+      <h2>第一件事，是总分就不一样</h2>
+      <p>做这件事的第一步，是把官方文件一份一份下下来。深圳、东莞、广州、佛山，四座城市的招生文件、招生计划、历年录取标准，各归各的城市，各归各的年份。</p>
+      <p>收上来之后，我做的第一件事，是把每座城市的“中考总分”对齐。结果是：</p>
+      <table>
+        <colgroup><col style="width:25%"><col style="width:75%"></colgroup>
+        <tr><th>城市</th><th>中考总分</th></tr>
+        <tr><td>深圳</td><td>630 分（2026 年起，从 610 分调到 630 分）</td></tr>
+        <tr><td>东莞</td><td>800 分</td></tr>
+        <tr><td>广州</td><td>810 分</td></tr>
+        <tr><td>佛山</td><td>740 分</td></tr>
+      </table>
+      <img class="inline-img" src="第05篇-四座城市我们一座一座来-公众号-图表01-四城总分.png" alt="四城总分对比">
+      <p class="img-cap">四城总分：深圳 630 / 东莞 800 / 广州 810 / 佛山 740</p>
+      <p>四座城市，四个满分。</p>
+      <p>这就意味着，<strong>“600 分”这三个字，在四座城市不是同一件事</strong>——在深圳，它是接近顶部的分数；到了东莞、广州，只是中等偏上。</p>
+      <p>更关键的是，<strong>其中三座还在动。</strong></p>
+      <p>深圳刚改完，从 610 调到 630。东莞已经明确：2027 年起降到 680 分，计分科目从 10 门减到 8 门，生物、地理不再计入录取总分。佛山也明确，2027 年起调整为 700 分。</p>
+      <p>只有广州说得很清楚：<strong>到 2029 年前，保持 810 分不变。</strong></p>
+      <p>还有一件更麻烦的：<strong>往年的录取线，不能直接拿来比。</strong></p>
+      <p>深圳从 610 改到 630，录进去的每一所学校，分数线也跟着换了尺度。同样是 550 分，在 610 那一套里和 630 那一套里，不是同一个位置——得换算过，才能放在一起看。</p>
+      <p>家长自己查，栽的常常也是这儿：看到“这所学校去年 550 分”，就拿来对今年的分数。</p>
+
+      <h2>第二件事，批次这张表也不一样</h2>
+      <p>在深圳，录取按五个批次走：</p>
+      <div class="quote">自主招生批 → 名额分配批 → 统招第一批 → 统招第二批 → 统招第三批</div>
+      <p>东莞也是五个批次，但名字和里面装的东西，是另一套：</p>
+      <div class="quote">提前批 → 第一批 → 第二批 → 第三批 → 第四批</div>
+      <img class="inline-img" src="第05篇-四座城市我们一座一座来-公众号-图表02-批次对比.png" alt="深圳五批与东莞五批对比">
+      <p class="img-cap">深圳五批 vs 东莞五批：名称与内容对照</p>
+      <p>东莞的“第一批”里，装的是公办普高、民办普高、中本贯通班、综合高中普高班。深圳的“统招第一批”里，装的是普高。</p>
+      <p>两座城市都有“第一批”这三个字，<strong>可它不是同一批学校。</strong></p>
+      <p>再翻佛山，会看到更细的一层：佛山的批次下面还分“层次”——<strong>光一个提前批，就排了六个层次。</strong></p>
+      <p>广州又是另一种分法：四个批次的招生学校，其中第二批次，是按初中学校来排列的。</p>
+
+      <h2>更关键的，是填几个、怎么录</h2>
+      <p>比批次叫什么名字更要紧的，是志愿本身怎么填。</p>
+      <p><strong>先看能填几个。</strong></p>
+      <table>
+        <colgroup><col style="width:55%"><col style="width:45%"></colgroup>
+        <tr><th>城市与批次</th><th>可填志愿数</th></tr>
+        <tr><td>深圳 · 统招第一批</td><td>16 个（普通高中最多 12 个）</td></tr>
+        <tr><td>东莞 · 第一批</td><td>6 个</td></tr>
+        <tr><td>深圳 · 第二批</td><td>18 个</td></tr>
+        <tr><td>东莞 · 第二批</td><td>6 个</td></tr>
+      </table>
+      <p><strong>深圳的志愿表，比东莞长得多。</strong></p>
+      <img class="inline-img" src="第05篇-四座城市我们一座一座来-公众号-图表03-志愿数量.png" alt="深圳长表与东莞短表对比">
+      <p class="img-cap">志愿表对比：深圳长表 vs 东莞短表</p>
+      <p><strong>再说怎么录。</strong></p>
+      <p>深圳是<strong>平行志愿</strong>：系统按总分从高到低，一个一个考生处理；轮到谁，就按他自己排的志愿顺序往下看，够哪个录哪个。<strong>志愿之间不分差</strong>——最想去的放第一个，就对了。</p>
+      <p>东莞不是这样。东莞的大部分学校也按平行志愿来，<strong>但一批重点高中例外</strong>：</p>
+      <p>报第二志愿，录取分数线要<strong>比第一志愿高 5 分</strong>；报第三志愿，要<strong>高 10 分</strong>；而且这些学校<strong>只录到第三志愿</strong>——第四志愿及以后，直接不看了。</p>
+      <p>同样一个孩子、同样一个分数，在深圳，志愿顺序是“喜好顺序”；在东莞，志愿顺序还带着“分数代价”。</p>
+      <p><strong>两张志愿表放在一起，是完全不同的两张表。</strong></p>
+
+      <h2>所以只能一座一座来</h2>
+      <p>每年找我们咨询的家长，深圳最多。所以第一座，从深圳开始。</p>
+      <p>深圳之后，第二座是东莞。</p>
+      <p>东莞给我的第一个提醒，就是上面那个总分：<strong>它 2027 年要从 800 分降到 680 分，计分科目从 10 门减到 8 门。</strong></p>
+      <p>这两件事叠在一起，意味着什么？</p>
+      <p>意味着<strong>东莞 2026 年的录取分数线，到 2027 年，不能直接拿来对照。</strong></p>
+      <p>不是“大概往上浮一点”的问题——总分换了，算分的科目也换了。去年那条线，明年就是拿另一把尺子量出来的数。</p>
+      <p>深圳那边是往上加，好歹算得出来。东莞这个算不出来——<strong>一年的线归一年，分开标。</strong></p>
+
+      <h2>你们那座城市，做到哪儿了</h2>
+      <p>深圳、东莞的资料已经重新梳理完毕，广州还在做。佛山的材料也拿到了，排在后面。</p>
+      <p>这些资料理完，下一步要做出一样东西。<strong>它叫 HSEE择校助手。</strong></p>
+      <p>名字是我们自己起的，费了不少劲。难的不是想不出好名字——<strong>“中考”“升学”“志愿”这几个字，一个都用不上</strong>。有的是政府部门在用，有的早被人注册了。能叫的划掉一批又一批，最后用了个缩写：HSEE——High School Enrollment Exam（中考）的缩写。</p>
+      <p>起这个名字，跟你们填志愿其实是一回事——好名字早被别人占了，剩下来的又差点意思，来回算几遍，最后还是回到规则允许的那几个里挑。</p>
+      <p>如果你所在的城市还没排到，不用急：<strong>我会一座一座写过来。</strong></p>
+
+      <h2>接下来</h2>
+      <p>这件事的工作量，确实不小。四个城市，四套文件，每个城市还要一年一年往回核。</p>
+      <p>好在这些年一直在做这件事——资料是现成的，方法也已经跑熟。所以路子是清楚的，剩下的就是一步一步走。</p>
+      <p>等四座城市都齐了，我想先请一批家长进来试用，看哪里还不顺手。</p>
+      <p>下一篇，我想讲讲：<strong>为什么网上那些分数线，不能直接拿来用。</strong></p>
+    
+      <div class="tail">
+        <b>小洁</b>｜做教育快十年。这些年，为了把中考志愿说明白，光查资料就要花掉大量时间和精力。耗时，费力，也煎熬。所以我想，能不能设计一个中考志愿填报软件，方便家长自己动手科学规划孩子的中考志愿，而且不费劲。
+      </div>
+
+    </div>
+
+    <div class="notice">
+      本文涉及的总分口径、批次结构与志愿投档规则，参考深圳、东莞、广州、佛山四市官方发布的招生文件；2027 年起的调整引自各市教育局已公布的实施意见，具体口径请以官方最新发布为准。
+    </div>
+
+    <div class="footer">小洁查志愿 · 深莞广佛 四城中考 · 系列第 05 篇图文样板</div>
+
+  </div>
+</body>
+</html>

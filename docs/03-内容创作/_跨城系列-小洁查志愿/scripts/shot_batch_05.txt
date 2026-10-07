@@ -1,0 +1,269 @@
+﻿{
+  "src": "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第06篇-为什么我们不直接抄网上的分数线\\01.公众号\\第06篇-公众号图文样板.html",
+  "url": "file:///E:/1.HSEE/6.ContentCrawlKits/docs/03-%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/_%E8%B7%A8%E5%9F%8E%E7%B3%BB%E5%88%97-%E5%B0%8F%E6%B4%81%E6%9F%A5%E5%BF%97%E6%84%BF/%E7%AC%AC06%E7%AF%87-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E7%9B%B4%E6%8E%A5%E6%8A%84%E7%BD%91%E4%B8%8A%E7%9A%84%E5%88%86%E6%95%B0%E7%BA%BF/01.%E5%85%AC%E4%BC%97%E5%8F%B7/%E7%AC%AC06%E7%AF%87-%E5%85%AC%E4%BC%97%E5%8F%B7%E5%9B%BE%E6%96%87%E6%A0%B7%E6%9D%BF.html",
+  "outdir": "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第06篇-为什么我们不直接抄网上的分数线\\01.公众号\\_shots",
+  "include": [
+    "lint",
+    "screenshots",
+    "structure"
+  ],
+  "shots": {
+    "desktop": {
+      "screenshot": "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第06篇-为什么我们不直接抄网上的分数线\\01.公众号\\_shots\\第06篇-公众号图文样板_desktop.jpg",
+      "screenshotBytes": 336006,
+      "truncated": false,
+      "structure": {
+        "title": "第06篇-公众号图文样板",
+        "firstH1": "中考志愿：网上的分数线，为什么不能直接拿来用",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "fullpage": {
+          "w": 1440,
+          "h": 5661
+        },
+        "counts": {
+          "section": 0,
+          "h1": 1,
+          "h2": 6,
+          "img": 4,
+          "canvas": 0,
+          "svg": 0,
+          "links": 0,
+          "buttons": 0
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "overlappingText": [
+        {
+          "a": {
+            "tag": "strong",
+            "text": "第一批志愿",
+            "rect": [
+              405,
+              3104,
+              83,
+              21
+            ]
+          },
+          "b": {
+            "tag": "strong",
+            "text": "没在名额分配走成，或者想以普通生身份进这所学校，就必须在第一批再填一次。",
+            "rect": [
+              405,
+              3104,
+              644,
+              52
+            ]
+          },
+          "intersectPx": 1733,
+          "coverRatio": 1
+        },
+        {
+          "a": {
+            "tag": "strong",
+            "text": "平行志愿",
+            "rect": [
+              432,
+              3379,
+              66,
+              21
+            ]
+          },
+          "b": {
+            "tag": "strong",
+            "text": "按总分从高到低，一个一个考生往下走。轮到你，就按你填的顺序往后看，够哪所算哪所。",
+            "rect": [
+              382,
+              3379,
+              644,
+              52
+            ]
+          },
+          "intersectPx": 1386,
+          "coverRatio": 1
+        },
+        {
+          "a": {
+            "tag": "strong",
+            "text": "三、这是谁说的？",
+            "rect": [
+              382,
+              4928,
+              132,
+              21
+            ]
+          },
+          "b": {
+            "tag": "strong",
+            "text": "推算出来的数，不该被当成官方值来用。",
+            "rect": [
+              382,
+              4928,
+              660,
+              52
+            ]
+          },
+          "intersectPx": 2772,
+          "coverRatio": 1
+        }
+      ],
+      "overlappingTextHint": "含义：两个含文字的元素 bounding rect 有交集。典型 case：绝对定位徽章/浮层压到内容文字上、卡片尺寸没对齐。coverRatio 是交集面积占较小元素面积的比例，越大越可疑。 | 修法：调整定位、给徽章预留空间、或缩小重叠元素之一。 | 豁免：(1) 故意的视觉层叠（如卡片右上角小 badge 落在卡片 padding 空隙里没盖文字），可对着截图确认后忽略；(2) coverRatio < 0.1 且截图看不出问题的，多半是亚像素抖动。",
+      "reportSource": "cdp"
+    },
+    "mobile": {
+      "screenshot": "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第06篇-为什么我们不直接抄网上的分数线\\01.公众号\\_shots\\第06篇-公众号图文样板_mobile.jpg",
+      "screenshotBytes": 438922,
+      "slices": [
+        "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第06篇-为什么我们不直接抄网上的分数线\\01.公众号\\_shots\\第06篇-公众号图文样板_mobile_p1of2.jpg",
+        "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第06篇-为什么我们不直接抄网上的分数线\\01.公众号\\_shots\\第06篇-公众号图文样板_mobile_p2of2.jpg"
+      ],
+      "sliceHint": "主图过阈值（字节>800KB 或 高度>4000px），已按 3200px 切片。若主图 Read 失败，改读 slices 里各分片。",
+      "truncated": false,
+      "structure": {
+        "title": "第06篇-公众号图文样板",
+        "firstH1": "中考志愿：网上的分数线，为什么不能直接拿来用",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "fullpage": {
+          "w": 390,
+          "h": 6265
+        },
+        "counts": {
+          "section": 0,
+          "h1": 1,
+          "h2": 6,
+          "img": 4,
+          "canvas": 0,
+          "svg": 0,
+          "links": 0,
+          "buttons": 0
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "overlappingText": [
+        {
+          "a": {
+            "tag": "strong",
+            "text": "“正取线”和“名额分配控制线”，也是两个数",
+            "rect": [
+              44,
+              1732,
+              320,
+              51
+            ]
+          },
+          "b": {
+            "tag": "strong",
+            "text": "不能互相参考",
+            "rect": [
+              223,
+              1761,
+              96,
+              21
+            ]
+          },
+          "intersectPx": 2016,
+          "coverRatio": 1
+        },
+        {
+          "a": {
+            "tag": "strong",
+            "text": "平行志愿",
+            "rect": [
+              70,
+              3570,
+              64,
+              21
+            ]
+          },
+          "b": {
+            "tag": "strong",
+            "text": "按总分从高到低，一个一个考生往下走。轮到你，就按你填的顺序往后看，够哪所算哪所。",
+            "rect": [
+              22,
+              3570,
+              336,
+              80
+            ]
+          },
+          "intersectPx": 1344,
+          "coverRatio": 1
+        }
+      ],
+      "overlappingTextHint": "含义：两个含文字的元素 bounding rect 有交集。典型 case：绝对定位徽章/浮层压到内容文字上、卡片尺寸没对齐。coverRatio 是交集面积占较小元素面积的比例，越大越可疑。 | 修法：调整定位、给徽章预留空间、或缩小重叠元素之一。 | 豁免：(1) 故意的视觉层叠（如卡片右上角小 badge 落在卡片 padding 空隙里没盖文字），可对着截图确认后忽略；(2) coverRatio < 0.1 且截图看不出问题的，多半是亚像素抖动。",
+      "mobileFontIssuesWarning": [
+        {
+          "kind": "small-body-text",
+          "tag": "span",
+          "fontSize": 12,
+          "text": "小洁查志愿"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "span",
+          "fontSize": 12,
+          "text": "深莞广佛 四城中考 · 系列图文样板"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 13,
+          "text": "深莞广佛四城中考志愿一查就明白 · “HSEE择校助手”小程序诞生记 · 第 6"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "p",
+          "fontSize": 12.5,
+          "text": "分数线类型：住宿/走读、A/C/D 类、正取线/名额分配控制线"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "p",
+          "fontSize": 12.5,
+          "text": "名额分配志愿 vs 第一批志愿：两次填报、互不顶替"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "p",
+          "fontSize": 12.5,
+          "text": "看到分数线，先问三句：哪一年的？哪条线？谁说的？"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 13.5,
+          "text": "小洁｜做教育快十年。这些年，为了把中考志愿说明白，光查资料就要花掉大量时间和精力"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12.5,
+          "text": "本文涉及的名额分配规则与分数线口径，参考深圳市官方发布的招生文件与《考生报考指导"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12,
+          "text": "小洁查志愿 · 深莞广佛 四城中考 · 系列第 06 篇图文样板"
+        }
+      ],
+      "mobileFontIssuesHint": "warning · 含义（仅 mobile shot 触发）：两类问题合并——(a) kind=small-body-text：正文字号 < 14px，手机上难读；(b) kind=input-under-16px：<input> / <textarea> font-size < 16px，iOS Safari 聚焦时会自动缩放页面（那种一点输入框页面跳一下的贼恶心 UX）。 | 修法：正文 ≥ 14px（16px 更佳）；表单元素 ≥ 16px。可以在移动断点里针对性调大：`@media (max-width: 640px) { body { font-size: 16px; } input, textarea { font-size: 16px; } }`。 | 豁免：(1) 图例 / caption / footnote 类辅助文字，12–13px 可接受，但应控制在页面 5% 以内；(2) 数据密集型表格数字（如财务表 12px 是行业惯例）——需要该单元格开 `tnum` 等宽数字避免飘忽；(3) input 已设 `font-size: 16px` 但仍报出——可能是 inline style / 父级 rem 计算异常，检查实际 computed 值。",
+      "reportSource": "cdp"
+    }
+  },
+  "engine": "chrome_cli",
+  "chromiumExec": "C:\\Users\\weiwei/AppData/Local/ms-playwright\\chromium_headless_shell-1228\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+  "engineDegraded": true,
+  "engineDegradedReason": "playwright 未装",
+  "elapsedSec": 10.46
+}

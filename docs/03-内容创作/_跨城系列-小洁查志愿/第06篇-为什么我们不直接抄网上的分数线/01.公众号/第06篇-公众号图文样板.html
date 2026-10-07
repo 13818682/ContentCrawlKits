@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第06篇-公众号图文样板</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F2A4A'/%3E%3Cpath d='M9 23V9l14 3v11' fill='none' stroke='%23D4A843' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M9 23h14' stroke='%23F4F1EA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #ECEFF2;
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    color: #2B2B2B;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 760px; margin: 0 auto; background: #fff; box-shadow: 0 2px 24px rgba(15,42,74,.10); }
+  .masthead {
+    background: #0F2A4A;
+    color: #F4F1EA;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    letter-spacing: .06em;
+  }
+  .masthead .col { color: #D4A843; font-weight: 700; }
+  .masthead .tag { color: #8FB4D6; }
+  .cover { display: block; width: 100%; height: auto; }
+  .body { padding: 34px 42px 46px; }
+  h1 {
+    font-size: 27px;
+    line-height: 1.45;
+    color: #0F2A4A;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: .01em;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #7A8794;
+    border-bottom: 1px solid #EDEFF2;
+    padding-bottom: 18px;
+    margin-bottom: 26px;
+    letter-spacing: .03em;
+  }
+  p { margin: 0 0 20px; font-size: 16.5px; }
+  p.lead::first-letter { color: #D4A843; font-weight: 800; }
+  strong { color: #0F2A4A; }
+  h2 {
+    font-size: 20px;
+    color: #0F2A4A;
+    margin: 40px 0 16px;
+    padding-left: 14px;
+    border-left: 4px solid #D4A843;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 17px;
+    color: #0F2A4A;
+    margin: 26px 0 12px;
+    padding-left: 10px;
+    border-left: 3px solid #8FB4D6;
+    line-height: 1.4;
+  }
+  .quote {
+    background: #F7F4EC;
+    border-left: 4px solid #D4A843;
+    padding: 14px 18px;
+    margin: 0 0 20px;
+    color: #5A5342;
+    font-size: 16.5px;
+  }
+  .inline-img { display: block; width: 100%; height: auto; margin: 24px 0 8px; }
+  .img-cap { font-size: 12.5px; color: #9AA5B0; text-align: center; margin: 0 0 24px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 22px;
+    font-size: 15px;
+    table-layout: fixed;
+  }
+  th, td { border: 1px solid #DDE3E8; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #0F2A4A; color: #F4F1EA; font-weight: 700; }
+  tr:nth-child(even) td { background: #F7F9FA; }
+  ul { margin: 0 0 20px 1.4em; font-size: 16.5px; }
+  li { margin-bottom: 10px; }
+  .tail {
+    background: #F4F6F8;
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-top: 34px;
+    font-size: 13.5px;
+    color: #5A6570;
+  }
+  .tail b { color: #0F2A4A; }
+  .notice {
+    background: #0F2A4A;
+    color: #8FB4D6;
+    font-size: 12.5px;
+    padding: 18px 22px;
+    line-height: 1.7;
+  }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #A8B1BA;
+    padding: 26px 20px 34px;
+    letter-spacing: .08em;
+  }
+  @media (max-width: 640px) {
+    .body { padding: 24px 22px 34px; }
+    h1 { font-size: 22px; }
+    p, ul { font-size: 16px; }
+    table { font-size: 14px; }
+    th, td { padding: 8px 10px; }
+    .masthead { padding: 12px 18px; font-size: 12px; }
+  }
+
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="masthead">
+      <span class="col">小洁查志愿</span>
+      <span class="tag">深莞广佛 四城中考 · 系列图文样板</span>
+    </div>
+
+    <img class="cover" src="第06篇-为什么我们不直接抄网上的分数线-公众号-封面.png" alt="第06篇封面">
+
+    <div class="body">
+
+      <h1>中考志愿：网上的分数线，为什么不能直接拿来用</h1>
+      <div class="subtitle">深莞广佛四城中考志愿一查就明白 · “HSEE择校助手”小程序诞生记 · 第 6 篇</div>
+
+
+      <p class="lead">一位家长把手机递到我面前。</p>
+      <p>屏幕上是一所高中的录取分数线——她一共搜到三个版本，来自三个不同的账号：一个是学校公众号发的喜报，一个是机构整理的表格，一个是家长群转发的截图。</p>
+      <p>“你看，到底哪个是真的？”</p>
+      <p>我把三个数字都记下来，一个一个往回找。找完之后我跟她说：<strong>这三个数，可能都是真的。</strong></p>
+      <p>她愣了一下。</p>
+      <p><strong>因为它们说的不是同一件事。</strong></p>
+
+      <h2>我是怎么查的</h2>
+      <p>每看到一个分数，我做的第一件事不是判断它对不对，而是先问：<strong>这个数据的定义和来源是什么？</strong></p>
+      <p>往回查的办法很笨，就三步：<strong>找它出自哪一年、找它是哪条线、找它是谁说的</strong>——是官方公布的，还是别人算出来的。</p>
+      <p>那位家长搜到的三个数，拆开是这样：一个说的是住宿生的线，一个是走读生的线；剩下那个，是某一年、某一类考生的线。</p>
+      <p><strong>三个数，三条线，三个年份。放在一起，当然对不上。</strong></p>
+
+      <h2>同一个分数，至少有这几种</h2>
+      <p>在深圳，一所学校的录取分数，从来不是一个数。</p>
+      <img class="inline-img" src="第06篇-为什么我们不直接抄网上的分数线-公众号-图表01-分数线结构.png" alt="分数线类型结构">
+      <p class="img-cap">分数线类型：住宿/走读、A/C/D 类、正取线/名额分配控制线</p>
+      <ul>
+        <li><strong>住宿生和走读生，是两个数。</strong></li>
+        <li><strong>A 类、C 类、D 类考生，是三个不同的数。</strong></li>
+        <li><strong>“正取线”和“名额分配控制线”，也是两个数</strong>——它们不一样，而且<strong>不能互相参考</strong>。</li>
+      </ul>
+      <p>同一个孩子、同一个分数，因为报的是住宿还是走读、因为自己是哪一类考生，落在<strong>完全不同的线上</strong>。</p>
+      <p>所以当有人告诉你“这所学校 570 分”（举例）的时候，<strong>这句话本身是不完整的</strong>——它缺了三个定语。</p>
+
+      <h2>更难的一层，藏在年份里</h2>
+      <p>深圳的中考总分，<strong>2026 年起从 610 分调到了 630 分。</strong></p>
+      <p>总分变了，所有分数线都得跟着重新排。<strong>把 2025 年的线和 2026 年的线直接摆在一起比，是没有意义的。</strong></p>
+      <p>可网上很多表格，恰恰就是这么排的。</p>
+
+      <h2>数据对上了，还要再问一句“然后呢”</h2>
+      <p>把年份和线对上是第一步。</p>
+      <p><strong>但规则本身，还常常藏着一层没人会告诉你的东西。</strong>这层东西，才是家长最用得上的。</p>
+      <p>看两条。</p>
+
+      <h3>名额分配填了，第一批还要再填一次</h3>
+      <p>在深圳，名额分配（大家常说的“指标生”）是单独一个批次。</p>
+      <p>很多家长以为：名额分配能报这所学校，第一批就不用再填了。</p>
+      <p><strong>不是。要填两次。</strong></p>
+      <p>因为这两件事，<strong>是两个完全独立的批次，互不顶替</strong>。</p>
+      <img class="inline-img" src="第06篇-为什么我们不直接抄网上的分数线-公众号-图表03-双批次.png" alt="名额分配与第一批双批次">
+      <p class="img-cap">名额分配志愿 vs 第一批志愿：两次填报、互不顶替</p>
+      <ul>
+        <li><strong>名额分配志愿</strong>：只管“指标生”这一条路，只在本校内部比，用的是单独的控制线。</li>
+        <li><strong>第一批志愿</strong>：这是大多数孩子被录取的那一批。<strong>没在名额分配走成，或者想以普通生身份进这所学校，就必须在第一批再填一次。</strong></li>
+      </ul>
+      <p>一句话：<strong>名额分配是“多出来的一次机会”，不是第一批的替身。</strong></p>
+      <p>少填一次，就少一条路。文件里写了，只是没人会替你指出来。</p>
+
+      <h3>志愿的分数，为什么要一档一档拉开</h3>
+      <p>再看录取顺序。</p>
+      <p>深圳是<strong>平行志愿</strong>：<strong>按总分从高到低，一个一个考生往下走。轮到你，就按你填的顺序往后看，够哪所算哪所。</strong></p>
+      <p>这里有个后果很关键：<strong>同一批里，被前面哪个志愿录取了，后面填的就全都不看了。</strong></p>
+      <p>所以志愿不能都填一个档次的学校。<strong>分数线要一档一档拉开</strong>——前面放要跳一跳才够得着的，中间放稳妥的，最后一定要放一个肯定能上的。</p>
+      <p>都挤在同一档，一旦够不上，就会一路滑到底。</p>
+
+      <h2>我们给自己定了三条规矩</h2>
+      <p><strong>一、每个数，都说得出处。</strong></p>
+      <p>每个数都得说得出<strong>哪一年、哪条线、谁公布的</strong>。说不出来的，不放。</p>
+      <p>我们整理资料时就这么办：数据一律标官方来源；没把握的推断，宁可删掉，也不写成结论。</p>
+      <p>这样表会短一点，看着没那么“全”。但家长拿到的每个数，都能自己回去查。</p>
+      <p><strong>二、规则背后的意思，要讲出来。</strong></p>
+      <p>不能照着文件抄一遍就完事，还得把<strong>规则背后的意思</strong>讲出来——</p>
+      <p><strong>这句话该怎么用、漏了会怎么样，得有人替家长点出来。</strong></p>
+      <p><strong>三、依据，和数字摆在一起。</strong></p>
+      <p>一个数是对的，不等于家长看得懂。<strong>哪一年、哪条线、谁公布的，得跟这个数摆在一起</strong>——这样他看到的就不只是一个分数，而是这个数是怎么来的。</p>
+      <p>给你看的时候也一样：给一个判断，后面就得跟着依据。<strong>依据摆不出来的，这个判断先不放。</strong></p>
+      <p><strong>不是“我说什么就是什么”，而是家长自己能看、能比、能判断。</strong></p>
+
+      <h2>如果看到一个分数线，一定问三个问题</h2>
+      <p>把上面这些收一下，其实就三句话。以后在任何地方看到中考分数线，你都可以问：</p>
+      <img class="inline-img" src="第06篇-为什么我们不直接抄网上的分数线-公众号-图表02-三问卡片.png" alt="三问卡片">
+      <p class="img-cap">看到分数线，先问三句：哪一年的？哪条线？谁说的？</p>
+      <p><strong>一、这是哪一年的？</strong>总分改过没有？改过的年份之间，不能直接比。</p>
+      <p><strong>二、这是哪条线？</strong>住宿还是走读？A 类、C 类还是 D 类？是正取线，还是名额分配控制线？</p>
+      <p><strong>三、这是谁说的？</strong>是教育局、招考办公布的，还是别人推算的？<strong>推算出来的数，不该被当成官方值来用。</strong></p>
+      <p>这三个问题，在深圳适用，在东莞、广州、佛山的道理也一样——只是要查的文件，换成那几座城市的。</p>
+      <p>问完你会发现：<strong>大部分“互相打架”的分数线，其实根本没打架。</strong>它们只是被放在了一起，而它们本来就不该放在一起。</p>
+      <p>真正该留神的，不是数字本身，是<strong>那个把不同口径的数字并排摆进一张表、还让你以为它们是同一件事的人</strong>。</p>
+      <p>如果你也见过互相矛盾的中考数据，可以发给我。<strong>我来帮你核它是哪一年、哪条线、谁说的。</strong></p>
+    
+      <div class="tail">
+        <b>小洁</b>｜做教育快十年。这些年，为了把中考志愿说明白，光查资料就要花掉大量时间和精力。耗时，费力，也煎熬。所以我想，能不能设计一个中考志愿填报软件，方便家长自己动手科学规划孩子的中考志愿，而且不费劲。
+      </div>
+
+    </div>
+
+    <div class="notice">
+      本文涉及的名额分配规则与分数线口径，参考深圳市官方发布的招生文件与《考生报考指导手册》；具体口径请以官方最新发布为准。
+    </div>
+
+    <div class="footer">小洁查志愿 · 深莞广佛 四城中考 · 系列第 06 篇图文样板</div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+﻿old1 repr: '<div class="quote"><strong>“查了两周中考志愿攻略，越看心里没底。”</strong></div>'
+occurrence at 5087 : 'g" alt="第01篇封面">\n\n    <div class="body">\n\n      <h1>中考志愿怎么报？查了两周攻略，越看心里越没底</h1>\n      <div class="subtitle">深莞广佛四城中考志愿一查'
+occurrence at 5460 : '位妈妈找我聊，她说的一句话，我一直记着——</p>\n      <div class="quote"><strong>“查了两周中考志愿攻略，越看心里越没底。”</strong></div>\n      <p>可听她讲完那两周，我更确定了一'
+occurrence at 6061 : '陌生，录取流程和规则细节也搞不清；网上搜出来的数字，有的没标出处，有的标了出处却对不上原文。</p>\n      <p>查了两周，越查心越乱。</p>\n      <p>我说，你把孩子的基础资料给我，我帮你分析一遍吧。作为从业者，这些政策我'

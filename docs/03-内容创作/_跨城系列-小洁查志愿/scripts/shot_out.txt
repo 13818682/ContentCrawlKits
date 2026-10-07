@@ -1,0 +1,179 @@
+﻿{
+  "src": "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第01篇-一个妈妈的深夜提问\\01.公众号\\第01篇-公众号图文样板.html",
+  "url": "file:///E:/1.HSEE/6.ContentCrawlKits/docs/03-%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/_%E8%B7%A8%E5%9F%8E%E7%B3%BB%E5%88%97-%E5%B0%8F%E6%B4%81%E6%9F%A5%E5%BF%97%E6%84%BF/%E7%AC%AC01%E7%AF%87-%E4%B8%80%E4%B8%AA%E5%A6%88%E5%A6%88%E7%9A%84%E6%B7%B1%E5%A4%9C%E6%8F%90%E9%97%AE/01.%E5%85%AC%E4%BC%97%E5%8F%B7/%E7%AC%AC01%E7%AF%87-%E5%85%AC%E4%BC%97%E5%8F%B7%E5%9B%BE%E6%96%87%E6%A0%B7%E6%9D%BF.html",
+  "outdir": "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第01篇-一个妈妈的深夜提问\\01.公众号\\_shots",
+  "include": [
+    "lint",
+    "screenshots",
+    "structure"
+  ],
+  "shots": {
+    "desktop": {
+      "screenshot": "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第01篇-一个妈妈的深夜提问\\01.公众号\\_shots\\第01篇-公众号图文样板_desktop.jpg",
+      "screenshotBytes": 289697,
+      "truncated": false,
+      "structure": {
+        "title": "第01篇-公众号图文样板",
+        "firstH1": "中考志愿怎么报？查了两周攻略，越看心里越没底",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "fullpage": {
+          "w": 1440,
+          "h": 4375
+        },
+        "counts": {
+          "section": 0,
+          "h1": 1,
+          "h2": 5,
+          "img": 2,
+          "canvas": 0,
+          "svg": 0,
+          "links": 0,
+          "buttons": 0
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "reportSource": "cdp"
+    },
+    "mobile": {
+      "screenshot": "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第01篇-一个妈妈的深夜提问\\01.公众号\\_shots\\第01篇-公众号图文样板_mobile.jpg",
+      "screenshotBytes": 405114,
+      "slices": [
+        "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第01篇-一个妈妈的深夜提问\\01.公众号\\_shots\\第01篇-公众号图文样板_mobile_p1of2.jpg",
+        "E:\\1.HSEE\\6.ContentCrawlKits\\docs\\03-内容创作\\_跨城系列-小洁查志愿\\第01篇-一个妈妈的深夜提问\\01.公众号\\_shots\\第01篇-公众号图文样板_mobile_p2of2.jpg"
+      ],
+      "sliceHint": "主图过阈值（字节>800KB 或 高度>4000px），已按 3200px 切片。若主图 Read 失败，改读 slices 里各分片。",
+      "truncated": false,
+      "structure": {
+        "title": "第01篇-公众号图文样板",
+        "firstH1": "中考志愿怎么报？查了两周攻略，越看心里越没底",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "fullpage": {
+          "w": 390,
+          "h": 5432
+        },
+        "counts": {
+          "section": 0,
+          "h1": 1,
+          "h2": 5,
+          "img": 2,
+          "canvas": 0,
+          "svg": 0,
+          "links": 0,
+          "buttons": 0
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "mobileFontIssuesWarning": [
+        {
+          "kind": "small-body-text",
+          "tag": "span",
+          "fontSize": 12,
+          "text": "小洁查志愿"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "span",
+          "fontSize": 12,
+          "text": "深莞广佛 四城中考 · 系列图文样板"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 13,
+          "text": "深莞广佛四城中考志愿一查就明白 · “HSEE择校助手”小程序诞生记 · 第 1"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "p",
+          "fontSize": 12.5,
+          "text": "深夜十一点，手机屏幕还亮着——插图示意"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12,
+          "text": "住宿 · D 类"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12,
+          "text": "走读 · D 类"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12,
+          "text": "住宿 · AC 类"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12,
+          "text": "走读 · AC 类"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12.5,
+          "text": "同一所学校、同一年，四条线——都印在官方文件里。具体分数以官方最新口径为准（发布"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12,
+          "text": "去年的录取线"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12,
+          "text": "每校招多少人"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12,
+          "text": "各校分到多少"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12,
+          "text": "怎么报、注意什么"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 13.5,
+          "text": "小洁｜做教育快十年。这些年，为了把一件事说明白，光查资料就要花掉大量时间和精力。"
+        },
+        {
+          "kind": "small-body-text",
+          "tag": "div",
+          "fontSize": 12.5,
+          "text": "本文涉及的招生学校数量、录取批次与分数线口径，参考深圳市教育局发布的 2026 "
+        }
+      ],
+      "mobileFontIssuesHint": "warning · 含义（仅 mobile shot 触发）：两类问题合并——(a) kind=small-body-text：正文字号 < 14px，手机上难读；(b) kind=input-under-16px：<input> / <textarea> font-size < 16px，iOS Safari 聚焦时会自动缩放页面（那种一点输入框页面跳一下的贼恶心 UX）。 | 修法：正文 ≥ 14px（16px 更佳）；表单元素 ≥ 16px。可以在移动断点里针对性调大：`@media (max-width: 640px) { body { font-size: 16px; } input, textarea { font-size: 16px; } }`。 | 豁免：(1) 图例 / caption / footnote 类辅助文字，12–13px 可接受，但应控制在页面 5% 以内；(2) 数据密集型表格数字（如财务表 12px 是行业惯例）——需要该单元格开 `tnum` 等宽数字避免飘忽；(3) input 已设 `font-size: 16px` 但仍报出——可能是 inline style / 父级 rem 计算异常，检查实际 computed 值。",
+      "reportSource": "cdp"
+    }
+  },
+  "engine": "chrome_cli",
+  "chromiumExec": "C:\\Users\\weiwei/AppData/Local/ms-playwright\\chromium_headless_shell-1228\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+  "engineDegraded": true,
+  "engineDegradedReason": "playwright 未装",
+  "elapsedSec": 11.49
+}

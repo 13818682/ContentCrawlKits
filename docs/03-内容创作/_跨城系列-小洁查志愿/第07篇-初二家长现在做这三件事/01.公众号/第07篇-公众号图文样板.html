@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第07篇-公众号图文样板</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F2A4A'/%3E%3Cpath d='M9 23V9l14 3v11' fill='none' stroke='%23D4A843' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M9 23h14' stroke='%23F4F1EA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #ECEFF2;
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    color: #2B2B2B;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 760px; margin: 0 auto; background: #fff; box-shadow: 0 2px 24px rgba(15,42,74,.10); }
+  .masthead {
+    background: #0F2A4A;
+    color: #F4F1EA;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    letter-spacing: .06em;
+  }
+  .masthead .col { color: #D4A843; font-weight: 700; }
+  .masthead .tag { color: #8FB4D6; }
+  .cover { display: block; width: 100%; height: auto; }
+  .body { padding: 34px 42px 46px; }
+  h1 {
+    font-size: 27px;
+    line-height: 1.45;
+    color: #0F2A4A;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: .01em;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #7A8794;
+    border-bottom: 1px solid #EDEFF2;
+    padding-bottom: 18px;
+    margin-bottom: 26px;
+    letter-spacing: .03em;
+  }
+  p { margin: 0 0 20px; font-size: 16.5px; }
+  p.lead::first-letter { color: #D4A843; font-weight: 800; }
+  strong { color: #0F2A4A; }
+  h2 {
+    font-size: 20px;
+    color: #0F2A4A;
+    margin: 40px 0 16px;
+    padding-left: 14px;
+    border-left: 4px solid #D4A843;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 17px;
+    color: #0F2A4A;
+    margin: 26px 0 12px;
+    padding-left: 10px;
+    border-left: 3px solid #8FB4D6;
+    line-height: 1.4;
+  }
+  .quote {
+    background: #F7F4EC;
+    border-left: 4px solid #D4A843;
+    padding: 14px 18px;
+    margin: 0 0 20px;
+    color: #5A5342;
+    font-size: 16.5px;
+  }
+  .inline-img { display: block; width: 100%; height: auto; margin: 24px 0 8px; }
+  .img-cap { font-size: 12.5px; color: #9AA5B0; text-align: center; margin: 0 0 24px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 22px;
+    font-size: 15px;
+    table-layout: fixed;
+  }
+  th, td { border: 1px solid #DDE3E8; padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: #0F2A4A; color: #F4F1EA; font-weight: 700; }
+  tr:nth-child(even) td { background: #F7F9FA; }
+  ul { margin: 0 0 20px 1.4em; font-size: 16.5px; }
+  li { margin-bottom: 10px; }
+  .tail {
+    background: #F4F6F8;
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-top: 34px;
+    font-size: 13.5px;
+    color: #5A6570;
+  }
+  .tail b { color: #0F2A4A; }
+  .notice {
+    background: #0F2A4A;
+    color: #8FB4D6;
+    font-size: 12.5px;
+    padding: 18px 22px;
+    line-height: 1.7;
+  }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #A8B1BA;
+    padding: 26px 20px 34px;
+    letter-spacing: .08em;
+  }
+  @media (max-width: 640px) {
+    .body { padding: 24px 22px 34px; }
+    h1 { font-size: 22px; }
+    p, ul { font-size: 16px; }
+    table { font-size: 14px; }
+    th, td { padding: 8px 10px; }
+    .masthead { padding: 12px 18px; font-size: 12px; }
+  }
+
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="masthead">
+      <span class="col">小洁查志愿</span>
+      <span class="tag">深莞广佛 四城中考 · 系列图文样板</span>
+    </div>
+
+    <img class="cover" src="第07篇-初二家长现在做这三件事-公众号-封面.png" alt="第07篇封面">
+
+    <div class="body">
+
+      <h1>中考志愿：初二这一年，做这三件事就够了</h1>
+      <div class="subtitle">深莞广佛四城中考志愿一查就明白 · “HSEE择校助手”小程序诞生记 · 第 7 篇</div>
+
+
+      <p class="lead">前阵子，一位初二家长问我：</p>
+      <div class="quote"><strong>“我们家明年才中考，现在看这些，是不是太早了？”</strong></div>
+      <p>我说：<strong>早。但也不早。</strong></p>
+      <p>她问：这是什么意思？</p>
+      <p>我说，如果指的是“该研究怎么填志愿了”——<strong>那确实早了一年。</strong></p>
+      <p>但如果指的是<strong>“该知道中考一共几条路、我家孩子在什么位置”</strong>——<strong>那已经不早了。</strong></p>
+
+      <h2>我为什么说“不早”</h2>
+      <p>准备这个系列的时候，我把深圳、东莞、广州、佛山四市的招生文件，按<strong>时间</strong>排了一遍。</p>
+      <p>各市的招生工作意见、志愿填报通知、录取工作通知，一份份摊开。</p>
+      <p>方法很笨：<strong>不看内容，只看每份文件管的是哪一段时间。</strong></p>
+      <p>排完之后，有件事很清楚——</p>
+      <p><strong>我查到的四市文件，时间线几乎都压在初三下学期那几个月。</strong></p>
+      <p>报名、填志愿、考试、录取，一份接一份，全挤在里面。</p>
+      <p>我原本以为，初二该有一份对应的东西。<strong>翻了几座城市，都没有专门给初二家长的文件。</strong></p>
+      <p>也就是说：<strong>初二这一年，官方不会告诉你“你现在该做什么”。</strong></p>
+      <p>这怪不得谁。<strong>官方文件是为“办事”写的，不是为“提前想”写的</strong>——它们只在事情发生的那几个月里，告诉你该怎么办。</p>
+      <p>所以这一年要补的功课，只能家长自己先做。<strong>也正是为什么，它值得提前一年——那一年你手里是空的，还有时间。</strong></p>
+
+      <h2>初二这一年，做三件事就够了</h2>
+      <p>不用看政策，不用背规则。就三件。</p>
+
+      <h3>第一件：知道有几条路</h3>
+      <p>很多家长心里的中考，是一道是非题：<strong>上普高，或者没上普高。</strong></p>
+      <p>不是的。</p>
+      <p>深圳、东莞、广州、佛山，每一座城市都<strong>不止一条路</strong>：普通高中、中职、技工院校、中本贯通（有些城市叫“3+4”），此外还有自主招生等通道。</p>
+      <img class="inline-img" src="第07篇-初二家长现在做这三件事-公众号-图表01-三件事.png" alt="四城中考路径图">
+      <p class="img-cap">四城中考路径：普高 / 中职 / 技工院校 / 中本贯通（3+4）/ 自主招生</p>
+      <p>这些路，<strong>并不完全互斥</strong>。走不通这一条，不等于全都走不通。</p>
+      <p><strong>初二要做的事，不是研究每条路怎么走，是先知道“原来有几条”。</strong></p>
+      <p>有了这张地图，初三再往里看细的。</p>
+
+      <h3>第二件：搞清楚“分类”</h3>
+      <p>第二件，比规则本身更要紧。</p>
+      <p>同一座城市、同一个分数，<strong>孩子属于哪一类，能报的范围就不一样。</strong></p>
+      <p>比如在深圳，考生分 A 类、C 类、D 类，<strong>报的其实是不同的池子</strong>；另外还有“名额分配”（大家常说的“指标生”），路径又不一样。</p>
+      <p><strong>初二不用背这些规则，但可以先把一件事弄清楚：我家孩子属于哪一类。</strong></p>
+      <p>这一件事定下来，以后你看到的每一条信息，<strong>才有地方落。</strong></p>
+
+      <h3>第三件：开始记“位次”，别只记“分数”</h3>
+      <p>第三件，也是最多家长做反的一件。</p>
+      <p>分数会变。比如深圳中考总分，2026 年起从 610 分调整为 630 分——<strong>总分一动，往年分数就没法直接比了。</strong></p>
+      <p>但<strong>位次不一样</strong>。位次（孩子这次考试在年级里大致排第几、或在哪一档）——这个坐标比较稳。</p>
+      <p>所以从初二开始，每次大考之后，<strong>记一笔</strong>：大概排在什么位置，跟上一次比是往前还是往后。</p>
+      <p>一年也就记十几次，每次两分钟。</p>
+      <p><strong>这不是给孩子贴标签，是给自己一个坐标。</strong></p>
+      <img class="inline-img" src="第07篇-初二家长现在做这三件事-公众号-图表02-位次记录.png" alt="位次记录示意">
+      <p class="img-cap">每次大考记一笔：大概排第几、往前还是往后</p>
+
+      <h2>为什么提前一年，成本最低</h2>
+      <p>初三下学期那几个月，事情是挤在一起的：报名、模考、填志愿、等成绩、等录取。</p>
+      <p>那时候家长<strong>没有时间</strong>慢慢看文件——只能听别人说。</p>
+      <p>而初二这一年做的事，<strong>几乎不占时间</strong>：知道有几条路、弄清属于哪一类、每次大考后记一笔。</p>
+      <p>到填志愿那个月，你不是从零开始，而是<strong>从一张已经有了的地图开始</strong>。</p>
+      <p>这不是让你少慌一点，是让你<strong>少犯那种“当时不知道”的错</strong>。</p>
+      <p>（这一年要做的事，四座城市是一样的——因为你要先有地图，才谈得上认路。四座城市真正的差别，要等初三才咬人。）</p>
+      <p>这三件事现在做，到填志愿那个月，就是你手里现成的底子。<strong>我们正在做的 HSEE 择校助手，接的就是这个。</strong></p>
+
+      <h2>让家长现在就动手，我其实有个顾虑</h2>
+      <p><strong>本来是给孩子多留一年从容，别弄成多紧张一年。</strong></p>
+      <p>我的判断是：上面这三件事，<strong>都是家长在自己本子上做的功课</strong>——不用跟孩子说，也不该压到孩子身上。</p>
+      <p><strong>今年该提前的，是家长的准备，不是孩子的压力。</strong></p>
+      <p>这三件事，不用一次做完。我的想法是：<strong>先把“知道有几条路”和“搞清楚分类”两件做扎实，“位次”从下一次大考开始记</strong>——一步一步来，比一次做完更稳。你想先看哪一块，可以说给我听。</p>
+    
+      <div class="tail">
+        <b>小洁</b>｜做教育快十年。这些年，为了把中考志愿说明白，光查资料就要花掉大量时间和精力。耗时，费力，也煎熬。所以我想，能不能设计一个中考志愿填报软件，方便家长自己动手科学规划孩子的中考志愿，而且不费劲。
+      </div>
+
+    </div>
+
+    <div class="notice">
+      本文涉及的中考路径与考生分类，参考深圳、东莞、广州、佛山四市官方发布的招生文件；总分口径、批次与分类规则请以各市最新官方发布为准。
+    </div>
+
+    <div class="footer">小洁查志愿 · 深莞广佛 四城中考 · 系列第 07 篇图文样板</div>
+
+  </div>
+</body>
+</html>

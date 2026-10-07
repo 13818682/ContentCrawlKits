@@ -1,0 +1,21 @@
+shot_batch_01.txt -> 第02篇-公众号图文样板.html
+   desktop: rci=0 []
+   mobile: rci=0 []
+shot_batch_02.txt -> 第03篇-公众号图文样板.html
+   desktop: rci=0 []
+   mobile: rci=0 []
+shot_batch_03.txt -> 第04篇-公众号图文样板.html
+   desktop: rci=0 []
+   mobile: rci=0 []
+shot_batch_04.txt -> 第05篇-公众号图文样板.html
+   desktop: rci=0 []
+   mobile: rci=0 []
+shot_batch_05.txt -> 第06篇-公众号图文样板.html
+   desktop: rci=0 []
+   mobile: rci=0 []
+shot_batch_06.txt -> 第07篇-公众号图文样板.html
+   desktop: rci=0 []
+   mobile: rci=0 []
+shot_batch_07.txt -> 第08篇-公众号图文样板.html
+   desktop: rci=0 []
+   mobile: rci=0 []
